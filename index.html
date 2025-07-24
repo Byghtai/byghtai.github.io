@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" data-lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Byght.ai - Künstliche Intelligenz der nächsten Generation</title>
+    <title data-i18n="page-title">Byght.ai - Künstliche Intelligenz der nächsten Generation</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Cookiebot Script -->
+    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="YOUR_COOKIEBOT_ID" data-blockingmode="auto" type="text/javascript"></script>
 </head>
 <body>
     <!-- Header -->
@@ -16,10 +19,21 @@
                 <h1>byght.ai</h1>
             </div>
             <div class="nav-links">
-                <a href="#features">Features</a>
-                <a href="#about">Über uns</a>
-                <a href="#contact">Kontakt</a>
-                <button class="cta-button">Demo starten</button>
+                <a href="#features" data-i18n="nav-features">Features</a>
+                <a href="#about" data-i18n="nav-about">Über uns</a>
+                <a href="#contact" data-i18n="nav-contact">Kontakt</a>
+                
+                <!-- Language Switcher -->
+                <div class="language-switcher">
+                    <button class="lang-btn active" data-lang="de">
+                        <i class="fas fa-globe"></i> DE
+                    </button>
+                    <button class="lang-btn" data-lang="en">
+                        <i class="fas fa-globe"></i> EN
+                    </button>
+                </div>
+                
+                <button class="cta-button" data-i18n="nav-cta">Demo starten</button>
             </div>
             <div class="mobile-menu-toggle">
                 <i class="fas fa-bars"></i>
@@ -31,13 +45,13 @@
     <section class="hero">
         <div class="hero-content">
             <div class="hero-text">
-                <h2>Die Zukunft der KI ist hier</h2>
-                <p>Entdecken Sie mit byght.ai innovative Lösungen für künstliche Intelligenz, die Ihr Unternehmen revolutionieren werden.</p>
+                <h2 data-i18n="hero-title">Die Zukunft der KI ist hier</h2>
+                <p data-i18n="hero-subtitle">Entdecken Sie mit byght.ai innovative Lösungen für künstliche Intelligenz, die Ihr Unternehmen revolutionieren werden.</p>
                 <div class="hero-buttons">
-                    <button class="primary-btn">Jetzt starten</button>
+                    <button class="primary-btn" data-i18n="hero-cta-primary">Jetzt starten</button>
                     <button class="secondary-btn">
                         <i class="fas fa-play"></i>
-                        Demo ansehen
+                        <span data-i18n="hero-cta-secondary">Demo ansehen</span>
                     </button>
                 </div>
             </div>
@@ -60,28 +74,28 @@
     <!-- Features Section -->
     <section id="features" class="features">
         <div class="container">
-            <h3>Unsere Features</h3>
+            <h3 data-i18n="features-title">Unsere Features</h3>
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-brain"></i>
                     </div>
-                    <h4>Intelligente Algorithmen</h4>
-                    <p>Modernste Machine Learning Algorithmen für präzise Vorhersagen und Analysen.</p>
+                    <h4 data-i18n="feature-1-title">Intelligente Algorithmen</h4>
+                    <p data-i18n="feature-1-desc">Modernste Machine Learning Algorithmen für präzise Vorhersagen und Analysen.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-rocket"></i>
                     </div>
-                    <h4>Blitzschnell</h4>
-                    <p>Optimierte Performance für Echtzeit-Verarbeitung großer Datenmengen.</p>
+                    <h4 data-i18n="feature-2-title">Blitzschnell</h4>
+                    <p data-i18n="feature-2-desc">Optimierte Performance für Echtzeit-Verarbeitung großer Datenmengen.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h4>Sicher & Zuverlässig</h4>
-                    <p>Enterprise-grade Sicherheit mit 99.9% Verfügbarkeit garantiert.</p>
+                    <h4 data-i18n="feature-3-title">Sicher & Zuverlässig</h4>
+                    <p data-i18n="feature-3-desc">Enterprise-grade Sicherheit mit 99.9% Verfügbarkeit garantiert.</p>
                 </div>
             </div>
         </div>
@@ -92,26 +106,26 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-text">
-                    <h3>Über byght.ai</h3>
-                    <p>Wir sind ein innovatives Team von KI-Experten, das sich darauf spezialisiert hat, komplexe Probleme mit modernster künstlicher Intelligenz zu lösen.</p>
+                    <h3 data-i18n="about-title">Über byght.ai</h3>
+                    <p data-i18n="about-desc">Wir sind ein innovatives Team von KI-Experten, das sich darauf spezialisiert hat, komplexe Probleme mit modernster künstlicher Intelligenz zu lösen.</p>
                     <ul class="about-list">
-                        <li><i class="fas fa-check"></i> 10+ Jahre Erfahrung in KI</li>
-                        <li><i class="fas fa-check"></i> 500+ erfolgreiche Projekte</li>
-                        <li><i class="fas fa-check"></i> Fortune 500 Kunden</li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="about-point-1">10+ Jahre Erfahrung in KI</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="about-point-2">500+ erfolgreiche Projekte</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="about-point-3">Fortune 500 Kunden</span></li>
                     </ul>
                 </div>
                 <div class="about-stats">
                     <div class="stat">
                         <h4>99.9%</h4>
-                        <p>Verfügbarkeit</p>
+                        <p data-i18n="stat-uptime">Verfügbarkeit</p>
                     </div>
                     <div class="stat">
                         <h4>500+</h4>
-                        <p>Projekte</p>
+                        <p data-i18n="stat-projects">Projekte</p>
                     </div>
                     <div class="stat">
                         <h4>24/7</h4>
-                        <p>Support</p>
+                        <p data-i18n="stat-support">Support</p>
                     </div>
                 </div>
             </div>
@@ -121,18 +135,18 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h3>Kontaktieren Sie uns</h3>
-            <p>Bereit, die Zukunft der KI zu erleben? Lassen Sie uns sprechen!</p>
+            <h3 data-i18n="contact-title">Kontaktieren Sie uns</h3>
+            <p data-i18n="contact-subtitle">Bereit, die Zukunft der KI zu erleben? Lassen Sie uns sprechen!</p>
             <div class="contact-form">
                 <form>
                     <div class="form-group">
-                        <input type="text" placeholder="Ihr Name" required>
-                        <input type="email" placeholder="Ihre E-Mail" required>
+                        <input type="text" data-i18n-placeholder="form-name" placeholder="Ihr Name" required>
+                        <input type="email" data-i18n-placeholder="form-email" placeholder="Ihre E-Mail" required>
                     </div>
                     <div class="form-group">
-                        <textarea placeholder="Ihre Nachricht" rows="5" required></textarea>
+                        <textarea data-i18n-placeholder="form-message" placeholder="Ihre Nachricht" rows="5" required></textarea>
                     </div>
-                    <button type="submit" class="submit-btn">Nachricht senden</button>
+                    <button type="submit" class="submit-btn" data-i18n="form-submit">Nachricht senden</button>
                 </form>
             </div>
         </div>
@@ -144,31 +158,31 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <h4>byght.ai</h4>
-                    <p>Die Zukunft der künstlichen Intelligenz</p>
+                    <p data-i18n="footer-tagline">Die Zukunft der künstlichen Intelligenz</p>
                 </div>
                 <div class="footer-links">
                     <div class="footer-section">
-                        <h5>Produkt</h5>
-                        <a href="#">Features</a>
-                        <a href="#">Preise</a>
-                        <a href="#">API</a>
+                        <h5 data-i18n="footer-product">Produkt</h5>
+                        <a href="#" data-i18n="footer-features">Features</a>
+                        <a href="#" data-i18n="footer-pricing">Preise</a>
+                        <a href="#" data-i18n="footer-api">API</a>
                     </div>
                     <div class="footer-section">
-                        <h5>Unternehmen</h5>
-                        <a href="#">Über uns</a>
-                        <a href="#">Karriere</a>
-                        <a href="#">Blog</a>
+                        <h5 data-i18n="footer-company">Unternehmen</h5>
+                        <a href="#" data-i18n="footer-about">Über uns</a>
+                        <a href="#" data-i18n="footer-careers">Karriere</a>
+                        <a href="#" data-i18n="footer-blog">Blog</a>
                     </div>
                     <div class="footer-section">
-                        <h5>Support</h5>
-                        <a href="#">Hilfe</a>
-                        <a href="#">Kontakt</a>
-                        <a href="#">Status</a>
+                        <h5 data-i18n="footer-support-title">Support</h5>
+                        <a href="#" data-i18n="footer-help">Hilfe</a>
+                        <a href="#" data-i18n="footer-contact">Kontakt</a>
+                        <a href="#" data-i18n="footer-status">Status</a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 byght.ai. Alle Rechte vorbehalten.</p>
+                <p data-i18n="footer-copyright">&copy; 2024 byght.ai. Alle Rechte vorbehalten.</p>
                 <div class="social-links">
                     <a href="#"><i class="fab fa-twitter"></i></a>
                     <a href="#"><i class="fab fa-linkedin"></i></a>
