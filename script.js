@@ -104,6 +104,7 @@ const i18n = {
 let currentLang = localStorage.getItem('preferred-language') || 'de';
 
 function setLanguage(lang) {
+    console.log('Setting language to:', lang);
     currentLang = lang;
     localStorage.setItem('preferred-language', lang);
     document.documentElement.setAttribute('lang', lang);
@@ -137,22 +138,36 @@ function setLanguage(lang) {
             btn.classList.add('active');
         }
     });
+    
+    console.log('Language updated to:', lang);
 }
 
 // Initialize language on page load
 function initializeLanguage() {
+    console.log('Initializing language system...');
+    console.log('Current language from storage:', currentLang);
+    console.log('Available languages:', Object.keys(i18n));
     setLanguage(currentLang);
 }
 
 // Smooth scrolling für Navigation Links
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM Content Loaded - Initializing...');
+    
     // Initialize language
     initializeLanguage();
     
     // Language switcher event listeners
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.addEventListener('click', function() {
+    const langButtons = document.querySelectorAll('.lang-btn');
+    console.log('Found language buttons:', langButtons.length);
+    
+    langButtons.forEach((btn, index) => {
+        console.log(`Setting up button ${index}:`, btn.getAttribute('data-lang'));
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
             const lang = this.getAttribute('data-lang');
+            console.log('Language button clicked:', lang);
             setLanguage(lang);
         });
     });
