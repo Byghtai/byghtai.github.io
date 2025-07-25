@@ -43,9 +43,12 @@
 
     <!-- Hero Section -->
     <section class="hero">
+        <!-- Particle System Background -->
+        <canvas id="particleCanvas" class="particle-canvas"></canvas>
+        
         <div class="hero-content">
             <div class="hero-text">
-                <h2 data-i18n="hero-title">Die Zukunft der KI ist hier</h2>
+                <h2 id="typewriter-text" data-i18n="hero-title">Die Zukunft der KI ist hier</h2>
                 <p data-i18n="hero-subtitle">Entdecken Sie mit byght.ai innovative Lösungen für künstliche Intelligenz, die Ihr Unternehmen revolutionieren werden.</p>
                 <div class="hero-buttons">
                     <button class="primary-btn" data-i18n="hero-cta-primary">Jetzt starten</button>
@@ -56,15 +59,74 @@
                 </div>
             </div>
             <div class="hero-visual">
-                <div class="ai-animation">
-                    <div class="neural-network">
-                        <div class="node"></div>
-                        <div class="node"></div>
-                        <div class="node"></div>
-                        <div class="node"></div>
-                        <div class="connection"></div>
-                        <div class="connection"></div>
-                        <div class="connection"></div>
+                <div class="compliance-dashboard">
+                    <div class="dashboard-header">
+                        <h4 data-i18n="dashboard-title">ISO 27001 Compliance Status</h4>
+                        <p data-i18n="dashboard-subtitle">Übersicht Ihrer aktuellen Sicherheitskontrollen</p>
+                    </div>
+                    
+                    <div class="kpi-grid">
+                        <div class="kpi-card primary">
+                            <div class="kpi-icon">
+                                <i class="fas fa-shield-check"></i>
+                            </div>
+                            <div class="kpi-content">
+                                <div class="kpi-value">114</div>
+                                <div class="kpi-label" data-i18n="kpi-controls">Controls</div>
+                                <div class="kpi-sublabel" data-i18n="kpi-total">Total implementiert</div>
+                            </div>
+                        </div>
+                        
+                        <div class="kpi-card success">
+                            <div class="kpi-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="kpi-content">
+                                <div class="kpi-value">98%</div>
+                                <div class="kpi-label" data-i18n="kpi-implementation">Implementation</div>
+                                <div class="kpi-sublabel" data-i18n="kpi-coverage">Coverage Rate</div>
+                            </div>
+                        </div>
+                        
+                        <div class="kpi-card info">
+                            <div class="kpi-icon">
+                                <i class="fas fa-file-check"></i>
+                            </div>
+                            <div class="kpi-content">
+                                <div class="kpi-value">92%</div>
+                                <div class="kpi-label" data-i18n="kpi-evidence">Evidence</div>
+                                <div class="kpi-sublabel" data-i18n="kpi-documented">Dokumentiert</div>
+                            </div>
+                        </div>
+                        
+                        <div class="kpi-card warning">
+                            <div class="kpi-icon">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                            <div class="kpi-content">
+                                <div class="kpi-value">3</div>
+                                <div class="kpi-label" data-i18n="kpi-pending">Pending</div>
+                                <div class="kpi-sublabel" data-i18n="kpi-reviews">Reviews</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="compliance-metrics">
+                        <div class="metric-item">
+                            <i class="fas fa-bolt"></i>
+                            <span class="metric-value">23</span>
+                            <span class="metric-label" data-i18n="metric-automated">Automatisierte Controls</span>
+                        </div>
+                        <div class="metric-item">
+                            <i class="fas fa-clock"></i>
+                            <span class="metric-value">7</span>
+                            <span class="metric-label" data-i18n="metric-realtime">Echtzeit-Monitoring</span>
+                        </div>
+                        <div class="metric-item">
+                            <i class="fas fa-certificate"></i>
+                            <span class="metric-value">99.8%</span>
+                            <span class="metric-label" data-i18n="metric-uptime">Verfügbarkeit</span>
+                        </div>
                     </div>
                 </div>
             </div>

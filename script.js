@@ -8,6 +8,19 @@ const i18n = {
         'nav-cta': 'Demo starten',
         'hero-title': 'Die Zukunft der KI ist hier',
         'hero-subtitle': 'Entdecken Sie mit byght.ai innovative Lösungen für künstliche Intelligenz, die Ihr Unternehmen revolutionieren werden.',
+        'dashboard-title': 'ISO 27001 Compliance Status',
+        'dashboard-subtitle': 'Übersicht Ihrer aktuellen Sicherheitskontrollen',
+        'kpi-controls': 'Controls',
+        'kpi-total': 'Total implementiert',
+        'kpi-implementation': 'Implementation',
+        'kpi-coverage': 'Coverage Rate',
+        'kpi-evidence': 'Evidence',
+        'kpi-documented': 'Dokumentiert',
+        'kpi-pending': 'Pending',
+        'kpi-reviews': 'Reviews',
+        'metric-automated': 'Automatisierte Controls',
+        'metric-realtime': 'Echtzeit-Monitoring',
+        'metric-uptime': 'Verfügbarkeit',
         'hero-cta-primary': 'Jetzt starten',
         'hero-cta-secondary': 'Demo ansehen',
         'features-title': 'Unsere Features',
@@ -57,6 +70,19 @@ const i18n = {
         'nav-cta': 'Start Demo',
         'hero-title': 'The Future of AI is Here',
         'hero-subtitle': 'Discover innovative artificial intelligence solutions with byght.ai that will revolutionize your business.',
+        'dashboard-title': 'ISO 27001 Compliance Status',
+        'dashboard-subtitle': 'Overview of your current security controls',
+        'kpi-controls': 'Controls',
+        'kpi-total': 'Total implemented',
+        'kpi-implementation': 'Implementation',
+        'kpi-coverage': 'Coverage Rate',
+        'kpi-evidence': 'Evidence',
+        'kpi-documented': 'Documented',
+        'kpi-pending': 'Pending',
+        'kpi-reviews': 'Reviews',
+        'metric-automated': 'Automated Controls',
+        'metric-realtime': 'Real-time Monitoring',
+        'metric-uptime': 'Uptime',
         'hero-cta-primary': 'Get Started',
         'hero-cta-secondary': 'Watch Demo',
         'features-title': 'Our Features',
@@ -103,6 +129,178 @@ const i18n = {
 // Language management
 let currentLang = localStorage.getItem('preferred-language') || 'de';
 
+// Typewriter Effect
+class TypewriterEffect {
+    constructor(element, texts, speed = 50) {
+        this.element = element;
+        this.texts = texts;
+        this.speed = speed;
+        this.currentTextIndex = 0;
+        this.currentCharIndex = 0;
+        this.isDeleting = false;
+        this.isWaiting = false;
+    }
+
+    type() {
+        const currentText = this.texts[this.currentTextIndex];
+        
+        if (!this.isDeleting && this.currentCharIndex <= currentText.length) {
+            this.element.textContent = currentText.substring(0, this.currentCharIndex);
+            this.currentCharIndex++;
+            
+            if (this.currentCharIndex > currentText.length) {
+                this.element.classList.add('typing-complete');
+                this.isWaiting = true;
+                setTimeout(() => {
+                    this.isWaiting = false;
+                    this.isDeleting = true;
+                    this.element.classList.remove('typing-complete');
+                }, 2000);
+            }
+        } else if (this.isDeleting && this.currentCharIndex >= 0) {
+            this.element.textContent = currentText.substring(0, this.currentCharIndex);
+            this.currentCharIndex--;
+            
+            if (this.currentCharIndex < 0) {
+                this.isDeleting = false;
+                this.currentTextIndex = (this.currentTextIndex + 1) % this.texts.length;
+                this.currentCharIndex = 0;
+            }
+        }
+
+        if (!this.isWaiting) {
+            setTimeout(() => this.type(), this.isDeleting ? this.speed / 2 : this.speed);
+        }
+    }
+
+    start() {
+        this.type();
+    }
+}
+
+// Particle System
+class ParticleSystem {
+    constructor(canvas) {
+        this.canvas = canvas;
+        this.ctx = canvas.getContext('2d');
+        this.particles = [];
+        this.mouse = { x: 0, y: 0 };
+        this.animationId = null;
+        
+        this.resize();
+        this.createParticles();
+        this.setupEventListeners();
+        this.animate();
+    }
+
+    resize() {
+        this.canvas.width = window.innerWidth;
+        this.canvas.height = window.innerHeight;
+    }
+
+    createParticles() {
+        // Reduce particles on mobile devices
+        const isMobile = window.innerWidth < 768;
+        const baseDensity = isMobile ? 25000 : 15000;
+        const particleCount = Math.floor((this.canvas.width * this.canvas.height) / baseDensity);
+        
+        for (let i = 0; i < particleCount; i++) {
+            this.particles.push({
+                x: Math.random() * this.canvas.width,
+                y: Math.random() * this.canvas.height,
+                vx: (Math.random() - 0.5) * 0.5,
+                vy: (Math.random() - 0.5) * 0.5,
+                size: Math.random() * 2 + 1,
+                opacity: Math.random() * 0.5 + 0.2,
+                originalX: 0,
+                originalY: 0
+            });
+        }
+        
+        this.particles.forEach(particle => {
+            particle.originalX = particle.x;
+            particle.originalY = particle.y;
+        });
+    }
+
+    setupEventListeners() {
+        window.addEventListener('resize', () => this.resize());
+        
+        this.canvas.addEventListener('mousemove', (e) => {
+            const rect = this.canvas.getBoundingClientRect();
+            this.mouse.x = e.clientX - rect.left;
+            this.mouse.y = e.clientY - rect.top;
+        });
+
+        this.canvas.addEventListener('mouseleave', () => {
+            this.mouse.x = -100;
+            this.mouse.y = -100;
+        });
+    }
+
+    animate() {
+        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        
+        this.particles.forEach(particle => {
+            // Mouse interaction
+            const dx = this.mouse.x - particle.x;
+            const dy = this.mouse.y - particle.y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+            const maxDistance = 150;
+            
+            if (distance < maxDistance) {
+                const force = (maxDistance - distance) / maxDistance;
+                particle.vx -= (dx / distance) * force * 0.1;
+                particle.vy -= (dy / distance) * force * 0.1;
+            }
+            
+            // Return to original position
+            const returnForce = 0.02;
+            particle.vx += (particle.originalX - particle.x) * returnForce;
+            particle.vy += (particle.originalY - particle.y) * returnForce;
+            
+            // Apply friction
+            particle.vx *= 0.95;
+            particle.vy *= 0.95;
+            
+            // Update position
+            particle.x += particle.vx;
+            particle.y += particle.vy;
+            
+            // Draw particle
+            this.ctx.beginPath();
+            this.ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+            this.ctx.fillStyle = `rgba(102, 126, 234, ${particle.opacity})`;
+            this.ctx.fill();
+            
+            // Draw connections
+            this.particles.forEach(otherParticle => {
+                if (particle !== otherParticle) {
+                    const dx = particle.x - otherParticle.x;
+                    const dy = particle.y - otherParticle.y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+                    
+                    if (distance < 100) {
+                        this.ctx.beginPath();
+                        this.ctx.moveTo(particle.x, particle.y);
+                        this.ctx.lineTo(otherParticle.x, otherParticle.y);
+                        this.ctx.strokeStyle = `rgba(102, 126, 234, ${0.1 * (1 - distance / 100)})`;
+                        this.ctx.stroke();
+                    }
+                }
+            });
+        });
+        
+        this.animationId = requestAnimationFrame(() => this.animate());
+    }
+
+    destroy() {
+        if (this.animationId) {
+            cancelAnimationFrame(this.animationId);
+        }
+    }
+}
+
 function setLanguage(lang) {
     currentLang = lang;
     localStorage.setItem('preferred-language', lang);
@@ -137,6 +335,11 @@ function setLanguage(lang) {
             btn.classList.add('active');
         }
     });
+    
+    // Update typewriter texts if function exists
+    if (typeof window.updateTypewriterTexts === 'function') {
+        window.updateTypewriterTexts();
+    }
 }
 
 // Initialize language on page load
@@ -148,6 +351,44 @@ function initializeLanguage() {
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize language
     initializeLanguage();
+    
+    // Initialize Typewriter Effect
+    const typewriterElement = document.getElementById('typewriter-text');
+    if (typewriterElement) {
+        const typewriter = new TypewriterEffect(
+            typewriterElement,
+            [
+                i18n[currentLang]['hero-title'],
+                'AI-Powered Security',
+                'ISO 27001 Ready',
+                'Enterprise Solutions'
+            ],
+            100
+        );
+        
+        // Update typewriter texts when language changes
+        window.updateTypewriterTexts = function() {
+            typewriter.texts = [
+                i18n[currentLang]['hero-title'],
+                currentLang === 'de' ? 'KI-gestützte Sicherheit' : 'AI-Powered Security',
+                'ISO 27001 Ready',
+                currentLang === 'de' ? 'Enterprise Lösungen' : 'Enterprise Solutions'
+            ];
+        };
+        
+        setTimeout(() => typewriter.start(), 500);
+    }
+    
+    // Initialize Particle System
+    const canvas = document.getElementById('particleCanvas');
+    if (canvas) {
+        const particleSystem = new ParticleSystem(canvas);
+        
+        // Cleanup on page unload
+        window.addEventListener('beforeunload', () => {
+            particleSystem.destroy();
+        });
+    }
     
     // Language switcher event listeners
     document.querySelectorAll('.lang-btn').forEach(btn => {
@@ -292,35 +533,22 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Neural Network Animation Enhancement
-    const nodes = document.querySelectorAll('.node');
+    // Dashboard Animation Enhancement
+    const kpiCards = document.querySelectorAll('.kpi-card');
     
-    nodes.forEach((node, index) => {
-        node.style.animationDelay = `${index * 0.5}s`;
+    kpiCards.forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.2}s`;
         
-        // Add click interaction
-        node.addEventListener('click', function() {
-            this.style.animation = 'none';
-            setTimeout(() => {
-                this.style.animation = 'pulse 2s ease-in-out infinite';
-            }, 10);
+        // Add hover effect
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-8px) scale(1.02)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1)';
         });
     });
 
-    // Parallax-Effekt für Hero-Section
-    window.addEventListener('scroll', function() {
-        const scrolled = window.pageYOffset;
-        const parallax = document.querySelector('.hero-visual');
-        
-        if (parallax) {
-            const speed = scrolled * 0.5;
-            parallax.style.transform = `translateY(${speed}px)`;
-        }
-    });
 
-    // Console-Nachricht für Entwickler
-    console.log('🚀 byght.ai Website erfolgreich geladen!');
-    console.log('💡 Diese Website wurde für GitHub Pages optimiert.');
-    console.log('🌍 Mehrsprachigkeit: Deutsch & Englisch verfügbar');
-    console.log('🍪 Cookiebot Integration bereit');
+
 }); 
