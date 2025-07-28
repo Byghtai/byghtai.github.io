@@ -580,6 +580,276 @@ body {
     50% { transform: translateY(-10px); }
 }
 
+/* Compliance Flow Section */
+.compliance-flow-section {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.compliance-flow-section h3 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.flow-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    text-align: center;
+    margin-bottom: 4rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.compliance-flow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.flow-step {
+    flex: 1;
+    text-align: center;
+    position: relative;
+}
+
+.input-step {
+    max-width: 250px;
+}
+
+.mapping-step {
+    max-width: 300px;
+    position: relative;
+}
+
+.output-step {
+    max-width: 350px;
+}
+
+.step-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+    margin: 0 auto 1.5rem;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.step-icon:hover {
+    transform: translateY(-5px);
+}
+
+.ai-icon {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
+    animation: pulse-ai 2s infinite;
+}
+
+@keyframes pulse-ai {
+    0%, 100% { 
+        box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
+        transform: scale(1);
+    }
+    50% { 
+        box-shadow: 0 15px 40px rgba(16, 185, 129, 0.5);
+        transform: scale(1.05);
+    }
+}
+
+.step-content h4 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.step-content p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.flow-arrow {
+    color: #667eea;
+    font-size: 2rem;
+    margin: 0 2rem;
+    animation: float-arrow 3s ease-in-out infinite;
+}
+
+@keyframes float-arrow {
+    0%, 100% { transform: translateX(0px); }
+    50% { transform: translateX(10px); }
+}
+
+.standards-showcase {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.rotating-standard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70px;
+}
+
+.standard-pill {
+    background: white;
+    border-radius: 30px;
+    padding: 1rem 2rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+    position: relative;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    border: 2px solid rgba(0, 0, 0, 0.06);
+    height: 56px;
+    white-space: nowrap;
+    min-width: 160px;
+    transform: scale(1);
+    opacity: 1;
+}
+
+.standard-pill.fade-out {
+    opacity: 0;
+    transform: scale(0.95);
+}
+
+.standard-pill.fade-in {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.standard-pill:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* Harmonische Pill Colors - reduzierte Farbpalette */
+.standard-pill.primary,
+.standard-pill.info,
+.standard-pill.purple {
+    color: #667eea;
+    background: rgba(102, 126, 234, 0.06);
+    border-color: rgba(102, 126, 234, 0.15);
+}
+
+.standard-pill.primary:hover,
+.standard-pill.info:hover,
+.standard-pill.purple:hover {
+    background: rgba(102, 126, 234, 0.12);
+    border-color: rgba(102, 126, 234, 0.25);
+}
+
+.standard-pill.success,
+.standard-pill.teal {
+    color: #10b981;
+    background: rgba(16, 185, 129, 0.06);
+    border-color: rgba(16, 185, 129, 0.15);
+}
+
+.standard-pill.success:hover,
+.standard-pill.teal:hover {
+    background: rgba(16, 185, 129, 0.12);
+    border-color: rgba(16, 185, 129, 0.25);
+}
+
+.standard-pill.warning,
+.standard-pill.accent {
+    color: #f59e0b;
+    background: rgba(245, 158, 11, 0.06);
+    border-color: rgba(245, 158, 11, 0.15);
+}
+
+.standard-pill.warning:hover,
+.standard-pill.accent:hover {
+    background: rgba(245, 158, 11, 0.12);
+    border-color: rgba(245, 158, 11, 0.25);
+}
+
+.standard-pill.secondary {
+    color: #6b7280;
+    background: rgba(107, 114, 128, 0.06);
+    border-color: rgba(107, 114, 128, 0.15);
+}
+
+.standard-pill.secondary:hover {
+    background: rgba(107, 114, 128, 0.12);
+    border-color: rgba(107, 114, 128, 0.25);
+}
+
+.standard-pill.more-standards {
+    color: #667eea;
+    background: rgba(102, 126, 234, 0.04);
+    border: 1px dashed rgba(102, 126, 234, 0.3);
+}
+
+.standard-pill.more-standards:hover {
+    background: rgba(102, 126, 234, 0.08);
+    border-color: rgba(102, 126, 234, 0.4);
+}
+
+.pill-text {
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1;
+    text-align: center;
+}
+
+.expand-icon {
+    font-size: 0.8rem;
+    color: currentColor;
+    font-weight: 600;
+}
+
+
+
+.compliance-indicator {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 20px;
+    height: 20px;
+    background: #10b981;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.6rem;
+    color: white;
+    font-weight: 700;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.5s ease;
+}
+
+.standard-badge.active .compliance-indicator {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+
+
+
 /* Features Section */
 .features {
     padding: 5rem 0;
@@ -1079,6 +1349,81 @@ body {
         grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
     }
+}
+
+/* Compliance Flow Responsive */
+@media (max-width: 1024px) {
+    .compliance-flow {
+        flex-direction: column;
+        gap: 3rem;
+    }
+    
+    .flow-arrow {
+        transform: rotate(90deg);
+        margin: 1rem 0;
+    }
+    
+
+    
+    .rotating-standard {
+        min-height: 60px;
+    }
+    
+    .standard-pill {
+        padding: 0.8rem 1.5rem;
+        height: 48px;
+    }
+    
+    .pill-text {
+        font-size: 1rem;
+    }
+    
+
+}
+
+@media (max-width: 640px) {
+    .compliance-flow-section {
+        padding: 3rem 0;
+    }
+    
+    .compliance-flow-section h3 {
+        font-size: 2rem;
+    }
+    
+    .flow-subtitle {
+        font-size: 1rem;
+        margin-bottom: 3rem;
+    }
+    
+    .step-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .step-content h4 {
+        font-size: 1.1rem;
+    }
+    
+    .step-content p {
+        font-size: 0.8rem;
+    }
+    
+    .rotating-standard {
+        min-height: 50px;
+    }
+    
+    .standard-pill {
+        padding: 0.6rem 1.2rem;
+        height: 40px;
+    }
+    
+    .pill-text {
+        font-size: 0.9rem;
+    }
+    
+
 }
 
 /* Responsive Design */

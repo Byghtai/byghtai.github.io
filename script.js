@@ -24,6 +24,15 @@ const i18n = {
         'metric-automated': 'Automatisierte Controls',
         'metric-realtime': 'Aufgaben anstehend',
         'metric-uptime': 'Frameworks',
+        'flow-title': 'Einmal eingeben, überall compliant',
+        'flow-subtitle': 'Ihre Daten werden automatisch auf alle relevanten Standards und Gesetze gemappt',
+        'step-input-title': 'Daten eingeben',
+        'step-input-desc': 'Einmalige Erfassung Ihrer Informationen, Prozesse und Maßnahmen',
+        'step-ai-title': 'KI-Mapping',
+        'step-ai-desc': 'Automatische Zuordnung zu allen relevanten Standards',
+        'step-output-title': 'Vollständige Compliance',
+        'step-output-desc': 'Alle Standards automatisch erfüllt und audit-ready',
+        'more-standards': 'Weitere',
         'hero-cta-primary': 'Demo vereinbaren',
         'hero-cta-secondary': 'Mehr erfahren',
         'features-title': 'Eine einzige Plattform für alle Compliance-Anforderungen',
@@ -206,6 +215,15 @@ const i18n = {
         'metric-automated': 'Automated Controls',
         'metric-realtime': 'Pending Tasks',
         'metric-uptime': 'Frameworks',
+        'flow-title': 'Enter once, compliant everywhere',
+        'flow-subtitle': 'Your data is automatically mapped to all relevant standards and regulations',
+        'step-input-title': 'Input Data',
+        'step-input-desc': 'One-time capture of your information, processes and measures',
+        'step-ai-title': 'AI Mapping',
+        'step-ai-desc': 'Automatic assignment to all relevant standards',
+        'step-output-title': 'Complete Compliance',
+        'step-output-desc': 'All standards automatically fulfilled and audit-ready',
+        'more-standards': 'More',
         'hero-cta-primary': 'Schedule Demo',
         'hero-cta-secondary': 'Learn More',
         'features-title': 'One Platform for All Compliance Requirements',
@@ -645,6 +663,9 @@ document.addEventListener('DOMContentLoaded', function() {
         // Already initialized earlier
     }
     
+    // Initialize Compliance Flow with rotating standards
+    initializeComplianceFlow();
+    
     // Language switcher event listeners
     document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.addEventListener('click', function(e) {
@@ -896,4 +917,86 @@ document.addEventListener('DOMContentLoaded', function() {
 
     }
 
-}); 
+});
+
+// Standards Rotation Data
+const standards = [
+    { name: 'ISO 27001', class: 'primary', dataStandard: 'iso27001' },
+    { name: 'GDPR', class: 'success', dataStandard: 'gdpr' },
+    { name: 'TISAX', class: 'info', dataStandard: 'tisax' },
+    { name: 'NIS-2', class: 'warning', dataStandard: 'nis2' },
+    { name: 'BSI C5', class: 'secondary', dataStandard: 'bsic5' },
+    { name: 'DORA', class: 'accent', dataStandard: 'dora' },
+    { name: 'AI Act', class: 'purple', dataStandard: 'aiact' },
+    { name: 'CRA', class: 'teal', dataStandard: 'cra' }
+];
+
+let currentStandardIndex = 0;
+let rotationInterval;
+
+// Compliance Flow Animation
+function initializeComplianceFlow() {
+    const flowSection = document.querySelector('.compliance-flow-section');
+    if (!flowSection) return;
+    
+    const rotatingPill = document.getElementById('rotating-pill');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Start standards rotation
+                setTimeout(() => startStandardsRotation(), 500);
+            } else {
+                // Stop rotation when not visible
+                stopStandardsRotation();
+            }
+        });
+    }, { threshold: 0.3 });
+    
+    observer.observe(flowSection);
+    
+    function startStandardsRotation() {
+        if (rotationInterval) return; // Already running
+        
+        rotationInterval = setInterval(() => {
+            rotateToNextStandard();
+        }, 1200); // Change every 1.2 seconds
+    }
+    
+    function stopStandardsRotation() {
+        if (rotationInterval) {
+            clearInterval(rotationInterval);
+            rotationInterval = null;
+        }
+    }
+    
+    function rotateToNextStandard() {
+        const rotatingPill = document.getElementById('rotating-pill');
+        
+        if (!rotatingPill) return;
+        
+        // Fade out current
+        rotatingPill.classList.add('fade-out');
+        
+        setTimeout(() => {
+            // Update to next standard
+            currentStandardIndex = (currentStandardIndex + 1) % standards.length;
+            const nextStandard = standards[currentStandardIndex];
+            
+            // Update pill content and classes
+            rotatingPill.className = `standard-pill ${nextStandard.class}`;
+            rotatingPill.setAttribute('data-standard', nextStandard.dataStandard);
+            rotatingPill.querySelector('.pill-text').textContent = nextStandard.name;
+            
+
+            
+            // Fade in new
+            rotatingPill.classList.remove('fade-out');
+            rotatingPill.classList.add('fade-in');
+            
+            setTimeout(() => {
+                rotatingPill.classList.remove('fade-in');
+            }, 400);
+        }, 200);
+    }
+}; 
