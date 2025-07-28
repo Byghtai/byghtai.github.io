@@ -6,9 +6,9 @@ const i18n = {
         'nav-about': 'Über uns',
         'nav-contact': 'Kontakt',
         'nav-cta': 'Demo starten',
-        'hero-title': 'Die Zukunft der KI ist hier',
+        'hero-title': 'Seamlessly manage, implement, and prove compliance through intelligent AI-driven automation',
         'hero-subtitle': 'Entdecken Sie mit byght.ai innovative Lösungen für künstliche Intelligenz, die Ihr Unternehmen revolutionieren werden.',
-        'dashboard-title': 'ISO 27001 Compliance Status',
+        'dashboard-title': 'Compliance Status',
         'dashboard-subtitle': 'Übersicht Ihrer aktuellen Sicherheitskontrollen',
         'kpi-controls': 'Controls',
         'kpi-total': 'Total implementiert',
@@ -47,20 +47,16 @@ const i18n = {
         'form-sending': 'Wird gesendet...',
         'form-sent': 'Gesendet! ✓',
         'form-error': 'Bitte füllen Sie alle Felder aus.',
-        'footer-tagline': 'Die Zukunft der künstlichen Intelligenz',
-        'footer-product': 'Produkt',
-        'footer-features': 'Features',
-        'footer-pricing': 'Preise',
-        'footer-api': 'API',
-        'footer-company': 'Unternehmen',
-        'footer-about': 'Über uns',
-        'footer-careers': 'Karriere',
-        'footer-blog': 'Blog',
-        'footer-support-title': 'Support',
-        'footer-help': 'Hilfe',
-        'footer-contact': 'Kontakt',
-        'footer-status': 'Status',
-        'footer-copyright': '© 2024 byght.ai. Alle Rechte vorbehalten.'
+        'footer-tagline': 'Transforming compliance complexity into strategic clarity through intelligent AI-driven automation.',
+        'footer-impressum': 'Impressum',
+        'footer-datenschutz': 'Datenschutzerklärung',
+        'footer-copyright': '© 2025 byght.ai. Alle Rechte vorbehalten.',
+        'impressum-page-title': 'Impressum - Byght.ai',
+        'impressum-title': 'Impressum',
+        'impressum-placeholder': 'Inhalt wird in Kürze ergänzt.',
+        'datenschutz-page-title': 'Datenschutzerklärung - Byght.ai',
+        'datenschutz-title': 'Datenschutzerklärung',
+        'datenschutz-placeholder': 'Inhalt wird in Kürze ergänzt.'
     },
     en: {
         'page-title': 'Byght.ai - Next Generation Artificial Intelligence',
@@ -68,9 +64,9 @@ const i18n = {
         'nav-about': 'About',
         'nav-contact': 'Contact',
         'nav-cta': 'Start Demo',
-        'hero-title': 'The Future of AI is Here',
+        'hero-title': 'Seamlessly manage, implement, and prove compliance through intelligent AI-driven automation',
         'hero-subtitle': 'Discover innovative artificial intelligence solutions with byght.ai that will revolutionize your business.',
-        'dashboard-title': 'ISO 27001 Compliance Status',
+        'dashboard-title': 'Compliance Status',
         'dashboard-subtitle': 'Overview of your current security controls',
         'kpi-controls': 'Controls',
         'kpi-total': 'Total implemented',
@@ -109,20 +105,16 @@ const i18n = {
         'form-sending': 'Sending...',
         'form-sent': 'Sent! ✓',
         'form-error': 'Please fill in all fields.',
-        'footer-tagline': 'The future of artificial intelligence',
-        'footer-product': 'Product',
-        'footer-features': 'Features',
-        'footer-pricing': 'Pricing',
-        'footer-api': 'API',
-        'footer-company': 'Company',
-        'footer-about': 'About',
-        'footer-careers': 'Careers',
-        'footer-blog': 'Blog',
-        'footer-support-title': 'Support',
-        'footer-help': 'Help',
-        'footer-contact': 'Contact',
-        'footer-status': 'Status',
-        'footer-copyright': '© 2024 byght.ai. All rights reserved.'
+        'footer-tagline': 'Transforming compliance complexity into strategic clarity through intelligent AI-driven automation.',
+        'footer-impressum': 'Legal Notice',
+        'footer-datenschutz': 'Privacy Policy',
+        'footer-copyright': '© 2025 byght.ai. All rights reserved.',
+        'impressum-page-title': 'Legal Notice - Byght.ai',
+        'impressum-title': 'Legal Notice',
+        'impressum-placeholder': 'Content will be added soon.',
+        'datenschutz-page-title': 'Privacy Policy - Byght.ai',
+        'datenschutz-title': 'Privacy Policy',
+        'datenschutz-placeholder': 'Content will be added soon.'
     }
 };
 
@@ -145,7 +137,12 @@ class TypewriterEffect {
         const currentText = this.texts[this.currentTextIndex];
         
         if (!this.isDeleting && this.currentCharIndex <= currentText.length) {
-            this.element.textContent = currentText.substring(0, this.currentCharIndex);
+            // Preserve HTML tags like <span class="ai-highlight">
+            if (currentText.includes('<span class="ai-highlight">')) {
+                this.element.innerHTML = currentText.substring(0, this.currentCharIndex);
+            } else {
+                this.element.textContent = currentText.substring(0, this.currentCharIndex);
+            }
             this.currentCharIndex++;
             
             if (this.currentCharIndex > currentText.length) {
@@ -158,7 +155,11 @@ class TypewriterEffect {
                 }, 2000);
             }
         } else if (this.isDeleting && this.currentCharIndex >= 0) {
-            this.element.textContent = currentText.substring(0, this.currentCharIndex);
+            if (currentText.includes('<span class="ai-highlight">')) {
+                this.element.innerHTML = currentText.substring(0, this.currentCharIndex);
+            } else {
+                this.element.textContent = currentText.substring(0, this.currentCharIndex);
+            }
             this.currentCharIndex--;
             
             if (this.currentCharIndex < 0) {
@@ -187,10 +188,16 @@ class ParticleSystem {
         this.mouse = { x: 0, y: 0 };
         this.animationId = null;
         
+        // Immediately set canvas dimensions
+        this.canvas.width = window.innerWidth;
+        this.canvas.height = window.innerHeight;
+        this.canvas.style.display = 'block';
+        
         this.resize();
         this.createParticles();
         this.setupEventListeners();
-        this.animate();
+        // Start animation immediately
+        requestAnimationFrame(() => this.animate());
     }
 
     resize() {
@@ -347,6 +354,29 @@ function initializeLanguage() {
     setLanguage(currentLang);
 }
 
+// Early Particle System Initialization
+function initParticleSystem() {
+    const canvas = document.getElementById('particleCanvas');
+    if (canvas && !canvas.particleSystemInitialized) {
+        canvas.particleSystemInitialized = true;
+        const particleSystem = new ParticleSystem(canvas);
+        
+        // Cleanup on page unload
+        window.addEventListener('beforeunload', () => {
+            particleSystem.destroy();
+        });
+        return true;
+    }
+    return false;
+}
+
+// Try to initialize immediately if DOM is ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initParticleSystem);
+} else {
+    initParticleSystem();
+}
+
 // Smooth scrolling für Navigation Links
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize language
@@ -358,36 +388,34 @@ document.addEventListener('DOMContentLoaded', function() {
         const typewriter = new TypewriterEffect(
             typewriterElement,
             [
-                i18n[currentLang]['hero-title'],
-                'AI-Powered Security',
-                'ISO 27001 Ready',
-                'Enterprise Solutions'
+                currentLang === 'de' ? 
+                    'Verwalten, implementieren und beweisen Sie Compliance nahtlos durch intelligente <span class="ai-highlight">KI-gesteuerte</span> Automatisierung' :
+                    'Seamlessly manage, implement, and prove compliance through intelligent <span class="ai-highlight">AI-driven</span> automation',
+                currentLang === 'de' ? 'Intelligentes Compliance Management' : 'Intelligent Compliance Management',
+                currentLang === 'de' ? 'Automatisierte Nachweissammlung' : 'Automated Evidence Collection',
+                currentLang === 'de' ? 'Echtzeit-Risikobewertung' : 'Real-time Risk Assessment'
             ],
-            100
+            80
         );
         
         // Update typewriter texts when language changes
         window.updateTypewriterTexts = function() {
             typewriter.texts = [
-                i18n[currentLang]['hero-title'],
-                currentLang === 'de' ? 'KI-gestützte Sicherheit' : 'AI-Powered Security',
-                'ISO 27001 Ready',
-                currentLang === 'de' ? 'Enterprise Lösungen' : 'Enterprise Solutions'
+                currentLang === 'de' ? 
+                    'Verwalten, implementieren und beweisen Sie Compliance nahtlos durch intelligente <span class="ai-highlight">KI-gesteuerte</span> Automatisierung' :
+                    'Seamlessly manage, implement, and prove compliance through intelligent <span class="ai-highlight">AI-driven</span> automation',
+                currentLang === 'de' ? 'Intelligentes Compliance Management' : 'Intelligent Compliance Management',
+                currentLang === 'de' ? 'Automatisierte Nachweissammlung' : 'Automated Evidence Collection',
+                currentLang === 'de' ? 'Echtzeit-Risikobewertung' : 'Real-time Risk Assessment'
             ];
         };
         
-        setTimeout(() => typewriter.start(), 500);
+        typewriter.start();
     }
     
-    // Initialize Particle System
-    const canvas = document.getElementById('particleCanvas');
-    if (canvas) {
-        const particleSystem = new ParticleSystem(canvas);
-        
-        // Cleanup on page unload
-        window.addEventListener('beforeunload', () => {
-            particleSystem.destroy();
-        });
+    // Initialize Particle System if not already done
+    if (!initParticleSystem()) {
+        // Already initialized earlier
     }
     
     // Language switcher event listeners
