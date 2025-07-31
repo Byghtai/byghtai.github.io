@@ -1,7 +1,7 @@
 // Internationalization object
 const i18n = {
     de: {
-        'page-title': 'Cybrion - Künstliche Intelligenz der nächsten Generation',
+        'page-title': 'byght.ai - Künstliche Intelligenz der nächsten Generation',
         'nav-features': 'Features',
         'nav-about': 'Über uns',
         'nav-contact': 'Kontakt',
@@ -10,7 +10,7 @@ const i18n = {
         'hero-title-highlight1': 'KI-gestützte Automatisierung',
         'hero-title-part2': 'implementieren, managen und nachweisen',
         'hero-title-highlight2': '',
-        'hero-subtitle': 'Entdecken Sie mit Cybrion innovative Lösungen für künstliche Intelligenz, die Ihr Unternehmen revolutionieren werden.',
+        'hero-subtitle': 'Entdecken Sie mit byght.ai innovative Lösungen für künstliche Intelligenz, die Ihr Unternehmen revolutionieren werden.',
         'dashboard-title': 'Compliance Status',
         'dashboard-subtitle': 'Übersicht Ihrer aktuellen Implementierung',
         'kpi-controls': 'Controls',
@@ -52,7 +52,7 @@ const i18n = {
         'typewriter-intro': 'Wir bringen Dinge zusammen, die zusammengehören:',
         'typewriter-line1': '<strong>Compliance</strong> trifft <strong>Kybernetik</strong>.',
         'typewriter-line2': 'Manage die Compliance in deinem Unternehmen mithilfe von AI.',
-        'about-title': 'Über Cybrion',
+        'about-title': 'Über byght.ai',
         'about-desc': 'Wir sind ein innovatives Team von KI-Experten, das sich darauf spezialisiert hat, komplexe Probleme mit modernster künstlicher Intelligenz zu lösen.',
         'about-point-1': '10+ Jahre Erfahrung in KI',
         'about-point-2': '500+ erfolgreiche Projekte',
@@ -72,25 +72,27 @@ const i18n = {
         'footer-tagline': 'Transforming compliance complexity into strategic clarity through intelligent AI-driven automation.',
         'footer-impressum': 'Impressum',
         'footer-datenschutz': 'Datenschutzerklärung',
-        'footer-copyright': '© 2025 Cybrion. Alle Rechte vorbehalten.',
-        'impressum-page-title': 'Impressum - Cybrion',
+        'footer-copyright': '© 2025 byght.ai. Alle Rechte vorbehalten.',
+        'impressum-page-title': 'Impressum - byght.ai',
         'impressum-title': 'Impressum',
         'impressum-subtitle': 'Angaben gemäß § 5 TMG',
-        'impressum-anbieter': 'Eine Marke der Cybrion GmbH',
+        'impressum-anbieter': 'Eine Marke der Byght GmbH',
         'impressum-geschaeftsfuehrung': 'Geschäftsführung',
+        'impressum-geschaeftsfuehrung-text': 'Vertretung der Byght GmbH durch:',
+        'impressum-geschaeftsfuehrung-namen': 'Johannes Mattes<br>Alexander Luca Graf<br>Petra Schneider',
         'impressum-kontakt': 'Kontakt',
         'impressum-telefon': 'Telefon:',
         'impressum-email': 'E-Mail:',
         'impressum-registereintrag': 'Registereintrag',
         'impressum-handelsregister': 'Eintragung im Handelsregister',
         'impressum-registergericht': 'Registergericht: Amtsgericht Kiel',
-        'impressum-registernummer': 'Registernummer: HRB [Registernummer]',
+        'impressum-registernummer': 'Registernummer: HRB 21142 KI',
         'impressum-umsatzsteuer-id': 'Umsatzsteuer-ID',
         'impressum-umsatzsteuer-text': 'Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:',
-        'impressum-umsatzsteuer-nummer': 'DE[USt-IdNr.] (wird bei Bedarf nachgetragen)',
+        'impressum-umsatzsteuer-nummer': 'DE326381701',
         'impressum-verantwortlich': 'Verantwortlich für den Inhalt',
         'impressum-verantwortlich-text': 'Verantwortlich nach § 55 Abs. 2 RStV:',
-        'impressum-verantwortlich-details': 'Geschäftsführung der Cybrion GmbH',
+        'impressum-verantwortlich-details': 'Geschäftsführung der Byght GmbH',
         'impressum-streitbeilegung': 'Online-Streitbeilegung',
         'impressum-streitbeilegung-text': 'Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:',
         'impressum-streitbeilegung-email': 'Unsere E-Mail-Adresse finden Sie oben im Impressum.',
@@ -106,12 +108,8 @@ const i18n = {
         'impressum-urheberrecht': 'Urheberrecht',
         'impressum-urheberrecht-text1': 'Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.',
         'impressum-urheberrecht-text2': 'Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.',
-        'impressum-berufsbezeichnung': 'Berufsbezeichnung und berufsrechtliche Regelungen',
-        'impressum-berufsbezeichnung-text': 'Berufsbezeichnung: IT-Dienstleistungen, Compliance-Software',
-        'impressum-kammer': 'Zuständige Kammer: IHK zu Kiel',
-        'impressum-verliehen': 'Verliehen in: Deutschland',
         'impressum-stand': 'Stand: 28.07.2025',
-        'datenschutz-page-title': 'Datenschutzerklärung - Cybrion',
+        'datenschutz-page-title': 'Datenschutzerklärung - byght.ai',
         'datenschutz-title': 'Datenschutzerklärung',
         'datenschutz-subtitle': 'Informationen über die Verarbeitung Ihrer personenbezogenen Daten',
         'datenschutz-ueberblick': '1. Datenschutz auf einen Blick',
@@ -192,7 +190,7 @@ const i18n = {
         'datenschutz-stand': 'Stand: 28.07.2025'
     },
     en: {
-        'page-title': 'Cybrion - Next Generation Artificial Intelligence',
+        'page-title': 'byght.ai - Next Generation Artificial Intelligence',
         'nav-features': 'Features',
         'nav-about': 'About',
         'nav-contact': 'Contact',
@@ -201,7 +199,7 @@ const i18n = {
         'hero-title-highlight1': 'AI-driven automation',
         'hero-title-part2': '',
         'hero-title-highlight2': '',
-        'hero-subtitle': 'Discover innovative artificial intelligence solutions with Cybrion that will revolutionize your business.',
+        'hero-subtitle': 'Discover innovative artificial intelligence solutions with byght.ai that will revolutionize your business.',
         'dashboard-title': 'Compliance Status',
         'dashboard-subtitle': 'Overview of your current implementation',
         'kpi-controls': 'Controls',
@@ -243,7 +241,7 @@ const i18n = {
         'typewriter-intro': 'We bring together things that belong together:',
         'typewriter-line1': '<strong>Compliance</strong> meets <strong>Cybernetics</strong>.',
         'typewriter-line2': 'Manage compliance in your company with the help of AI.',
-        'about-title': 'About Cybrion',
+        'about-title': 'About byght.ai',
         'about-desc': 'We are an innovative team of AI experts specialized in solving complex problems with cutting-edge artificial intelligence.',
         'about-point-1': '10+ years of AI experience',
         'about-point-2': '500+ successful projects',
@@ -263,25 +261,27 @@ const i18n = {
         'footer-tagline': 'Transforming compliance complexity into strategic clarity through intelligent AI-driven automation.',
         'footer-impressum': 'Legal Notice',
         'footer-datenschutz': 'Privacy Policy',
-        'footer-copyright': '© 2025 Cybrion. All rights reserved.',
-        'impressum-page-title': 'Legal Notice - Cybrion',
+        'footer-copyright': '© 2025 byght.ai. All rights reserved.',
+        'impressum-page-title': 'Legal Notice - byght.ai',
         'impressum-title': 'Legal Notice',
         'impressum-subtitle': 'Information according to § 5 TMG',
-        'impressum-anbieter': 'A brand of Cybrion GmbH',
+        'impressum-anbieter': 'A brand of Byght GmbH',
         'impressum-geschaeftsfuehrung': 'Management',
+        'impressum-geschaeftsfuehrung-text': 'Representation of Byght GmbH by:',
+        'impressum-geschaeftsfuehrung-namen': 'Johannes Mattes<br>Alexander Luca Graf<br>Petra Schneider',
         'impressum-kontakt': 'Contact',
         'impressum-telefon': 'Phone:',
         'impressum-email': 'Email:',
         'impressum-registereintrag': 'Commercial Register',
         'impressum-handelsregister': 'Entry in the Commercial Register',
         'impressum-registergericht': 'Registration Court: Amtsgericht Kiel',
-        'impressum-registernummer': 'Registration Number: HRB [Registration Number]',
+        'impressum-registernummer': 'Registration Number: HRB 21142 KI',
         'impressum-umsatzsteuer-id': 'VAT ID',
         'impressum-umsatzsteuer-text': 'VAT identification number according to § 27 a of the VAT Act:',
-        'impressum-umsatzsteuer-nummer': 'DE[VAT ID] (will be added if required)',
+        'impressum-umsatzsteuer-nummer': 'DE326381701',
         'impressum-verantwortlich': 'Responsible for Content',
         'impressum-verantwortlich-text': 'Responsible according to § 55 para. 2 RStV:',
-        'impressum-verantwortlich-details': 'Management of Cybrion GmbH',
+        'impressum-verantwortlich-details': 'Management of Byght GmbH',
         'impressum-streitbeilegung': 'Online Dispute Resolution',
         'impressum-streitbeilegung-text': 'The European Commission provides a platform for online dispute resolution (ODR):',
         'impressum-streitbeilegung-email': 'Our email address can be found above in the legal notice.',
@@ -297,12 +297,9 @@ const i18n = {
         'impressum-urheberrecht': 'Copyright',
         'impressum-urheberrecht-text1': 'The content and works created by the site operators on these pages are subject to German copyright law. Duplication, processing, distribution, and any form of commercialization of such material beyond the scope of copyright law shall require the prior written consent of the respective author or creator. Downloads and copies of this site are only permitted for private, non-commercial use.',
         'impressum-urheberrecht-text2': 'Insofar as the content on this site was not created by the operator, the copyrights of third parties are observed. In particular, third-party content is identified as such. Should you nevertheless become aware of a copyright infringement, please inform us accordingly. Upon becoming aware of legal violations, we will remove such content immediately.',
-        'impressum-berufsbezeichnung': 'Professional Designation and Professional Legal Regulations',
-        'impressum-berufsbezeichnung-text': 'Professional designation: IT services, compliance software',
-        'impressum-kammer': 'Competent chamber: IHK zu Kiel',
-        'impressum-verliehen': 'Granted in: Germany',
+
         'impressum-stand': 'Last updated: July 28, 2025',
-        'datenschutz-page-title': 'Privacy Policy - Cybrion',
+        'datenschutz-page-title': 'Privacy Policy - byght.ai',
         'datenschutz-title': 'Privacy Policy',
         'datenschutz-subtitle': 'Information about the processing of your personal data',
         'datenschutz-ueberblick': '1. Data Protection at a Glance',
@@ -445,134 +442,7 @@ class TypewriterEffect {
     }
 }
 
-// Particle System
-class ParticleSystem {
-    constructor(canvas) {
-        this.canvas = canvas;
-        this.ctx = canvas.getContext('2d');
-        this.particles = [];
-        this.mouse = { x: 0, y: 0 };
-        this.animationId = null;
-        
-        // Immediately set canvas dimensions
-        this.canvas.width = window.innerWidth;
-        this.canvas.height = window.innerHeight;
-        this.canvas.style.display = 'block';
-        
-        this.resize();
-        this.createParticles();
-        this.setupEventListeners();
-        // Start animation immediately
-        requestAnimationFrame(() => this.animate());
-    }
 
-    resize() {
-        this.canvas.width = window.innerWidth;
-        this.canvas.height = window.innerHeight;
-    }
-
-    createParticles() {
-        // Reduce particles on mobile devices
-        const isMobile = window.innerWidth < 768;
-        const baseDensity = isMobile ? 25000 : 15000;
-        const particleCount = Math.floor((this.canvas.width * this.canvas.height) / baseDensity);
-        
-        for (let i = 0; i < particleCount; i++) {
-            this.particles.push({
-                x: Math.random() * this.canvas.width,
-                y: Math.random() * this.canvas.height,
-                vx: (Math.random() - 0.5) * 0.5,
-                vy: (Math.random() - 0.5) * 0.5,
-                size: Math.random() * 2 + 1,
-                opacity: Math.random() * 0.5 + 0.2,
-                originalX: 0,
-                originalY: 0
-            });
-        }
-        
-        this.particles.forEach(particle => {
-            particle.originalX = particle.x;
-            particle.originalY = particle.y;
-        });
-    }
-
-    setupEventListeners() {
-        window.addEventListener('resize', () => this.resize());
-        
-        this.canvas.addEventListener('mousemove', (e) => {
-            const rect = this.canvas.getBoundingClientRect();
-            this.mouse.x = e.clientX - rect.left;
-            this.mouse.y = e.clientY - rect.top;
-        });
-
-        this.canvas.addEventListener('mouseleave', () => {
-            this.mouse.x = -100;
-            this.mouse.y = -100;
-        });
-    }
-
-    animate() {
-        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-        
-        this.particles.forEach(particle => {
-            // Mouse interaction
-            const dx = this.mouse.x - particle.x;
-            const dy = this.mouse.y - particle.y;
-            const distance = Math.sqrt(dx * dx + dy * dy);
-            const maxDistance = 150;
-            
-            if (distance < maxDistance) {
-                const force = (maxDistance - distance) / maxDistance;
-                particle.vx -= (dx / distance) * force * 0.1;
-                particle.vy -= (dy / distance) * force * 0.1;
-            }
-            
-            // Return to original position
-            const returnForce = 0.02;
-            particle.vx += (particle.originalX - particle.x) * returnForce;
-            particle.vy += (particle.originalY - particle.y) * returnForce;
-            
-            // Apply friction
-            particle.vx *= 0.95;
-            particle.vy *= 0.95;
-            
-            // Update position
-            particle.x += particle.vx;
-            particle.y += particle.vy;
-            
-            // Draw particle
-            this.ctx.beginPath();
-            this.ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-            this.ctx.fillStyle = `rgba(255, 255, 255, ${particle.opacity * 0.8})`;
-            this.ctx.fill();
-            
-            // Draw connections
-            this.particles.forEach(otherParticle => {
-                if (particle !== otherParticle) {
-                    const dx = particle.x - otherParticle.x;
-                    const dy = particle.y - otherParticle.y;
-                    const distance = Math.sqrt(dx * dx + dy * dy);
-                    
-                    if (distance < 100) {
-                        this.ctx.beginPath();
-                        this.ctx.moveTo(particle.x, particle.y);
-                        this.ctx.lineTo(otherParticle.x, otherParticle.y);
-                        this.ctx.strokeStyle = `rgba(255, 255, 255, ${0.1 * (1 - distance / 100)})`;
-                        this.ctx.stroke();
-                    }
-                }
-            });
-        });
-        
-        this.animationId = requestAnimationFrame(() => this.animate());
-    }
-
-    destroy() {
-        if (this.animationId) {
-            cancelAnimationFrame(this.animationId);
-        }
-    }
-}
 
 function setLanguage(lang) {
     currentLang = lang;
@@ -856,7 +726,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Reset
             typedText.textContent = '';
             cursor.classList.remove('hidden');
-            typewriterText.classList.remove('cybrion-highlight');
+            typewriterText.classList.remove('byght-highlight');
             explanationText.classList.remove('show');
             
             // Animation sequence
@@ -869,9 +739,9 @@ document.addEventListener('DOMContentLoaded', function() {
                                     setTimeout(() => {
                                         deleteWord(typedText, 80, () => {
                                             setTimeout(() => {
-                                                // Highlight Cybrion before typing
-                                                typewriterText.classList.add('cybrion-highlight');
-                                                typeWord('Cybrion', typedText, 120, () => {
+                                                        // Highlight byght.ai before typing
+        typewriterText.classList.add('byght-highlight');
+        typeWord('byght.ai', typedText, 120, () => {
                                                     cursor.classList.add('hidden');
                                                     setTimeout(() => {
                                                         explanationText.classList.add('show');
