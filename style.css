@@ -1477,6 +1477,9 @@ body {
         width: 100%;
         text-align: center;
         padding: 0.8rem 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     
     /* Compliance Dashboard Mobile Responsive */
@@ -1671,6 +1674,9 @@ body {
     .btn {
         padding: 0.7rem 1.2rem;
         font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     
     /* Compliance Dashboard for iPhone */
