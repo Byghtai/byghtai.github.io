@@ -1,6 +1,6 @@
-# byght.ai Test Website 🚀
+# maiqo Test Website 🚀
 
-Eine moderne, responsive Test-Website für byght.ai, speziell für GitHub Pages optimiert.
+Eine moderne, responsive Test-Website für maiqo, speziell für GitHub Pages optimiert.
 
 ## Features ✨
 
@@ -32,7 +32,7 @@ Eine moderne, responsive Test-Website für byght.ai, speziell für GitHub Pages 
 ```bash
 git init
 git add .
-git commit -m "Initial commit: byght.ai test website"
+git commit -m "Initial commit: maiqo test website"
 git branch -M main
 git remote add origin https://github.com/DEIN-USERNAME/DEIN-REPO.git
 git push -u origin main
@@ -52,7 +52,7 @@ website/
 
 ## Website-Bereiche 📋
 
-1. **Header**: Navigation mit byght.ai Branding
+1. **Header**: Navigation mit maiqo Branding
 2. **Hero Section**: Hauptbereich mit KI-Animation
 3. **Features**: Drei Hauptfeatures des Unternehmens
 4. **About**: Über das Unternehmen mit Statistiken
@@ -94,4 +94,4 @@ Bei Fragen oder Anpassungswünschen zur Website, einfach ein Issue erstellen ode
 
 ---
 
-**Entwickelt für byght.ai** | Optimiert für GitHub Pages | Made with ❤️ 
+**Entwickelt für maiqo** | Optimiert für GitHub Pages | Made with ❤️ 

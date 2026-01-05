@@ -1,7 +1,7 @@
 // Internationalization object
 const i18n = {
     de: {
-        'page-title': 'byght.ai - Compliance kann einfach sein. Verabschieden Sie sich von Redundanzen!',
+        'page-title': 'maiqo - Compliance kann einfach sein. Verabschieden Sie sich von Redundanzen!',
         'nav-features': 'Features',
         'nav-about': 'Über uns',
         'nav-contact': 'Kontakt',
@@ -10,7 +10,7 @@ const i18n = {
         'hero-title-highlight1': 'KI-gestützte Automatisierung',
         'hero-title-part2': 'implementieren, managen und nachweisen',
         'hero-title-highlight2': '',
-        'hero-subtitle': 'Entdecken Sie mit byght.ai innovative Lösungen für künstliche Intelligenz, die Ihr Unternehmen revolutionieren werden.',
+        'hero-subtitle': 'Entdecken Sie mit maiqo innovative Lösungen für künstliche Intelligenz, die Ihr Unternehmen revolutionieren werden.',
         'dashboard-title': 'Compliance Status',
         'dashboard-subtitle': 'Übersicht Ihrer aktuellen Implementierung',
         'kpi-controls': 'Controls',
@@ -52,7 +52,7 @@ const i18n = {
         'typewriter-intro': 'Wir bringen Dinge zusammen, die zusammengehören:',
         'typewriter-line1': '<strong>Compliance</strong> trifft <strong>Kybernetik</strong>.',
         'typewriter-line2': 'Manage die Compliance in deinem Unternehmen mithilfe von AI.',
-        'about-title': 'Über byght.ai',
+        'about-title': 'Über maiqo',
         'about-desc': 'Wir sind ein innovatives Team von KI-Experten, das sich darauf spezialisiert hat, komplexe Probleme mit modernster künstlicher Intelligenz zu lösen.',
         'about-point-1': '10+ Jahre Erfahrung in KI',
         'about-point-2': '500+ erfolgreiche Projekte',
@@ -72,8 +72,8 @@ const i18n = {
         'footer-tagline': 'Transforming compliance complexity into strategic clarity through intelligent AI-driven automation.',
         'footer-impressum': 'Impressum',
         'footer-datenschutz': 'Datenschutzerklärung',
-        'footer-copyright': '© 2025 byght.ai. Alle Rechte vorbehalten.',
-        'impressum-page-title': 'Impressum - byght.ai',
+        'footer-copyright': '© 2025 maiqo. Alle Rechte vorbehalten.',
+        'impressum-page-title': 'Impressum - maiqo',
         'impressum-title': 'Impressum',
         'impressum-subtitle': 'Angaben gemäß § 5 DDG',
         'impressum-anbieter': 'Eine Marke der Byght GmbH',
@@ -109,7 +109,7 @@ const i18n = {
         'impressum-urheberrecht-text1': 'Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.',
         'impressum-urheberrecht-text2': 'Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.',
         'impressum-stand': 'Stand: 28.07.2025',
-        'datenschutz-page-title': 'Datenschutzerklärung - byght.ai',
+        'datenschutz-page-title': 'Datenschutzerklärung - maiqo',
         'datenschutz-title': 'Datenschutzerklärung',
         'datenschutz-subtitle': 'Informationen über die Verarbeitung Ihrer personenbezogenen Daten',
         'datenschutz-ueberblick': '1. Datenschutz auf einen Blick',
@@ -186,7 +186,7 @@ const i18n = {
         'datenschutz-stand': 'Stand: 28.07.2025'
     },
     en: {
-        'page-title': 'byght.ai - Compliance can be simple. Say goodbye to redundancies!',
+        'page-title': 'maiqo - Compliance can be simple. Say goodbye to redundancies!',
         'nav-features': 'Features',
         'nav-about': 'About',
         'nav-contact': 'Contact',
@@ -195,7 +195,7 @@ const i18n = {
         'hero-title-highlight1': 'AI-driven automation',
         'hero-title-part2': '',
         'hero-title-highlight2': '',
-        'hero-subtitle': 'Discover innovative artificial intelligence solutions with byght.ai that will revolutionize your business.',
+        'hero-subtitle': 'Discover innovative artificial intelligence solutions with maiqo that will revolutionize your business.',
         'dashboard-title': 'Compliance Status',
         'dashboard-subtitle': 'Overview of your current implementation',
         'kpi-controls': 'Controls',
@@ -237,7 +237,7 @@ const i18n = {
         'typewriter-intro': 'We bring together things that belong together:',
         'typewriter-line1': '<strong>Compliance</strong> meets <strong>Cybernetics</strong>.',
         'typewriter-line2': 'Manage compliance in your company with the help of AI.',
-        'about-title': 'About byght.ai',
+        'about-title': 'About maiqo',
         'about-desc': 'We are an innovative team of AI experts specialized in solving complex problems with cutting-edge artificial intelligence.',
         'about-point-1': '10+ years of AI experience',
         'about-point-2': '500+ successful projects',
@@ -257,8 +257,8 @@ const i18n = {
         'footer-tagline': 'Transforming compliance complexity into strategic clarity through intelligent AI-driven automation.',
         'footer-impressum': 'Legal Notice',
         'footer-datenschutz': 'Privacy Policy',
-        'footer-copyright': '© 2025 byght.ai. All rights reserved.',
-        'impressum-page-title': 'Legal Notice - byght.ai',
+        'footer-copyright': '© 2025 maiqo. All rights reserved.',
+        'impressum-page-title': 'Legal Notice - maiqo',
         'impressum-title': 'Legal Notice',
         'impressum-subtitle': 'Information according to § 5 DDG',
         'impressum-anbieter': 'A brand of Byght GmbH',
@@ -295,7 +295,7 @@ const i18n = {
         'impressum-urheberrecht-text2': 'Insofar as the content on this site was not created by the operator, the copyrights of third parties are observed. In particular, third-party content is identified as such. Should you nevertheless become aware of a copyright infringement, please inform us accordingly. Upon becoming aware of legal violations, we will remove such content immediately.',
 
         'impressum-stand': 'Last updated: July 28, 2025',
-        'datenschutz-page-title': 'Privacy Policy - byght.ai',
+        'datenschutz-page-title': 'Privacy Policy - maiqo',
         'datenschutz-title': 'Privacy Policy',
         'datenschutz-subtitle': 'Information about the processing of your personal data',
         'datenschutz-ueberblick': '1. Data Protection at a Glance',
@@ -718,7 +718,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Reset
             typedText.textContent = '';
             cursor.classList.remove('hidden');
-            typewriterText.classList.remove('byght-highlight');
+            typewriterText.classList.remove('maiqo-highlight');
             explanationText.classList.remove('show');
             
             // Animation sequence
@@ -731,9 +731,9 @@ document.addEventListener('DOMContentLoaded', function() {
                                     setTimeout(() => {
                                         deleteWord(typedText, 80, () => {
                                             setTimeout(() => {
-                                                        // Highlight byght.ai before typing
-        typewriterText.classList.add('byght-highlight');
-        typeWord('byght.ai', typedText, 120, () => {
+                                                        // Highlight maiqo before typing
+        typewriterText.classList.add('maiqo-highlight');
+        typeWord('maiqo', typedText, 120, () => {
                                                     cursor.classList.add('hidden');
                                                     setTimeout(() => {
                                                         explanationText.classList.add('show');
