@@ -183,7 +183,7 @@ const i18n = {
         'datenschutz-widerruf-einwilligung': 'Sofern Sie uns eine Einwilligung erteilt haben, können Sie diese jederzeit mit Wirkung für die Zukunft widerrufen.',
         'datenschutz-beschwerde-aufsichtsbehoerde': 'Sie können sich jederzeit mit einer Beschwerde an eine Aufsichtsbehörde wenden, z. B. an die zuständige Aufsichtsbehörde des Bundeslands Ihres Wohnsitzes oder an die für uns als verantwortliche Stelle zuständige Behörde.',
         'datenschutz-liste-aufsichtsbehoerden': 'Eine Liste der Aufsichtsbehörden (für den nichtöffentlichen Bereich) mit Anschrift finden Sie unter:',
-        'datenschutz-stand': 'Stand: 28.07.2025'
+        'datenschutz-stand': 'Stand: 14.01.2026'
     },
     en: {
         'page-title': 'maiqo - Compliance can be simple. Say goodbye to redundancies!',
@@ -369,7 +369,7 @@ const i18n = {
         'datenschutz-widerruf-einwilligung': 'If you have given us consent, you can revoke it at any time with effect for the future.',
         'datenschutz-beschwerde-aufsichtsbehoerde': 'You can at any time lodge a complaint with a supervisory authority, e.g. with the competent supervisory authority of the federal state of your residence or with the authority responsible for us as the responsible body.',
         'datenschutz-liste-aufsichtsbehoerden': 'A list of supervisory authorities (for the non-public sector) with address can be found at:',
-        'datenschutz-stand': 'Last updated: July 28, 2025'
+        'datenschutz-stand': 'Last updated: January 14, 2026'
     }
 };
 
