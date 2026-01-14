@@ -49,6 +49,36 @@ const i18n = {
         'feature-5-desc': 'Fachbereiche liefern Nachweise, Plattform und Experten übernehmen den Rest.',
         'feature-6-title': 'Datensicherheit',
         'feature-6-desc': 'Höchste Datenschutzstandards: Hosting und KI vollständig in Deutschland.',
+        'ai-features-title': 'KI-Features, die Compliance besser machen',
+        'ai-features-subtitle': 'Moderne KI-Workflows, die Lücken sichtbar machen, Nachweise verstehen und Audits vorbereiten.',
+        'ai-feature-1-title': 'KI-basierte Gap-Analyse & intelligente Maßnahmenableitung',
+        'ai-feature-1-lead': 'Erkennen, was fehlt - und wissen, was zu tun ist.',
+        'ai-feature-1-body': 'maiqo analysiert Anforderungen automatisiert und gleicht sie mit dem Umsetzungsstand ab. Compliance-Lücken werden früh sichtbar. Das Ergebnis: klare Prioritäten, konkrete Maßnahmen und ein lernendes System zur kontinuierlichen Audit-Readiness.',
+        'ai-feature-2-title': 'KI-gestützte Analyse & Klassifikation von Nachweisdokumenten',
+        'ai-feature-2-lead': 'Nachweise verstehen - nicht nur ablegen.',
+        'ai-feature-2-body': 'Multimodale KI analysiert PDFs, Texte und Bilder, erkennt relevante Inhalte und bewertet sie. Nachweise werden passenden Anforderungen zugeordnet, inkl. Qualitätsbewertung. Ergebnis: skalierbare Evidenzbewertung ohne Dokumentenchaos.',
+        'ai-feature-3-title': 'Audit-fähige Aufbereitung operativer Umsetzungstexte',
+        'ai-feature-3-lead': 'Von technischer Fachsprache zu auditklarer Dokumentation.',
+        'ai-feature-3-body': 'Operative Beschreibungen werden semantisch aufbereitet und in strukturierte, normkonforme Maßnahmenbeschreibungen überführt. Nachvollziehbar für Auditorinnen und Auditoren - ohne Zusatzaufwand für Fachabteilungen.',
+        'ai-feature-4-title': 'KI-Auditor für simulationsbasierte Auditvorbereitung',
+        'ai-feature-4-lead': 'Audits vorbereiten, bevor sie stattfinden.',
+        'ai-feature-4-body': 'Der KI-Auditor simuliert echte Auditfragen, zeigt Unklarheiten und Schwachstellen und priorisiert die nächsten Schritte. Das ermöglicht proaktive Vorbereitung weit über Self-Assessments hinaus.',
+        'ai-feature-5-title': 'Automatisierte Beantwortung von Compliance- & Sicherheitsfragebögen',
+        'ai-feature-5-lead': 'Fragebögen beantworten - ohne jedes Mal neu anzufangen.',
+        'ai-feature-5-body': 'KI generiert Antworten aus bestehenden Maßnahmen, Dokumentationen und Nachweisen. Das spart Zeit, sorgt für Konsistenz und entlastet Compliance-, Security- und Sales-Teams.',
+        'ai-feature-6-title': 'Generierung auditfähiger Compliance-Dokumentation',
+        'ai-feature-6-lead': 'Dokumentation, die mit der Umsetzung mitwächst.',
+        'ai-feature-6-body': 'Aus Umsetzungselementen entstehen automatisch strukturierte, auditfähige Dokumente wie Richtlinien oder Verfahrensbeschreibungen - mit klaren Bezügen zu Anforderungen und Nachweisen.',
+        'ai-feature-7-title': 'KI-gestütztes Mapping neuer Anforderungen',
+        'ai-feature-7-lead': 'Neue Anforderungen integrieren - ohne alles neu zu bauen.',
+        'ai-feature-7-body': 'Die KI erkennt Überschneidungen, Abhängigkeiten und Ähnlichkeiten und ordnet neue Anforderungen bestehenden Regelwerken und Nachweisen zu. So lassen sich neue Standards schnell und ohne Redundanzen integrieren.',
+        'sovereignty-title': 'Datenschutz & Datensouveränität',
+        'sovereignty-subtitle': 'Unsere Cloud-Anwendung wird komplett in Deutschland betrieben. Für KI setzen wir auf europäische Modelle - ohne Training auf Kundendaten und ohne Übertragung in die USA.',
+        'sovereignty-point-1': 'Cloud-Hosting der Anwendung ausschließlich in Deutschland.',
+        'sovereignty-point-2': 'KI-Modelle in Europa, ohne Training oder Speicherung Ihrer Daten.',
+        'sovereignty-point-3': 'Volle Datensouveränität und DSGVO-konforme Verarbeitung.',
+        'sovereignty-badge': 'Europäischer KI-Partner',
+        'sovereignty-mistral': 'Mistral-Modelle in Europa - keine Nutzung von Kundendaten fürs Training.',
         'typewriter-intro': 'Wir bringen Dinge zusammen, die zusammengehören:',
         'typewriter-line1': '<strong>Compliance</strong> trifft <strong>Kybernetik</strong>.',
         'typewriter-line2': 'Manage die Compliance in deinem Unternehmen mithilfe von AI.',
@@ -234,6 +264,36 @@ const i18n = {
         'feature-5-desc': 'Departments provide evidence, platform and experts handle the rest.',
         'feature-6-title': 'Data Security',
         'feature-6-desc': 'Highest data protection standards: Hosting and AI completely in Germany.',
+        'ai-features-title': 'AI features that improve compliance',
+        'ai-features-subtitle': 'Modern AI workflows that surface gaps, understand evidence, and prepare audits.',
+        'ai-feature-1-title': 'AI-based gap analysis & intelligent remediation',
+        'ai-feature-1-lead': 'See what is missing - and know what to do.',
+        'ai-feature-1-body': 'maiqo automatically analyzes requirements and matches them to implementation status. Compliance gaps become visible early. The result: clear priorities, concrete actions, and a learning system for continuous audit readiness.',
+        'ai-feature-2-title': 'AI-assisted analysis & classification of evidence documents',
+        'ai-feature-2-lead': 'Understand evidence - not just store it.',
+        'ai-feature-2-body': 'Multimodal AI analyzes PDFs, text files, and images, recognizes relevant content, and evaluates it. Evidence is mapped to the right requirements, including quality assessment. Result: scalable evidence review without document chaos.',
+        'ai-feature-3-title': 'Audit-ready preparation of operational implementation texts',
+        'ai-feature-3-lead': 'From technical language to audit-ready documentation.',
+        'ai-feature-3-body': 'Operational descriptions are semantically prepared and turned into structured, standard-compliant control descriptions. Clear for auditors - without extra effort for domain teams.',
+        'ai-feature-4-title': 'AI auditor for simulation-based audit preparation',
+        'ai-feature-4-lead': 'Prepare audits before they happen.',
+        'ai-feature-4-body': 'The AI auditor simulates real audit questions, highlights ambiguities and weaknesses, and prioritizes next steps. This enables proactive preparation beyond self-assessments.',
+        'ai-feature-5-title': 'Automated answers for compliance & security questionnaires',
+        'ai-feature-5-lead': 'Answer questionnaires - without starting from scratch.',
+        'ai-feature-5-body': 'AI generates responses from existing controls, documentation, and evidence. It saves time, ensures consistency, and reduces workload for compliance, security, and sales teams.',
+        'ai-feature-6-title': 'Generation of audit-ready compliance documentation',
+        'ai-feature-6-lead': 'Documentation that grows with implementation.',
+        'ai-feature-6-body': 'From implementation elements, AI produces structured, audit-ready documents such as policies and procedures, with clear links to requirements and evidence.',
+        'ai-feature-7-title': 'AI-assisted mapping of new requirements',
+        'ai-feature-7-lead': 'Integrate new requirements - without rebuilding everything.',
+        'ai-feature-7-body': 'The AI detects overlaps, dependencies, and similarities and maps new requirements to existing frameworks and evidence. This lets you integrate new standards quickly and without redundancies.',
+        'sovereignty-title': 'Privacy & Data Sovereignty',
+        'sovereignty-subtitle': 'Our cloud application is hosted entirely in Germany. For AI, we use European models - no training on customer data and no transfers to the US.',
+        'sovereignty-point-1': 'Cloud hosting of the application exclusively in Germany.',
+        'sovereignty-point-2': 'European AI models with no training or storage of your data.',
+        'sovereignty-point-3': 'Full data sovereignty and GDPR-compliant processing.',
+        'sovereignty-badge': 'European AI Partner',
+        'sovereignty-mistral': 'Mistral models in Europe - no customer data used for training.',
         'typewriter-intro': 'We bring together things that belong together:',
         'typewriter-line1': '<strong>Compliance</strong> meets <strong>Cybernetics</strong>.',
         'typewriter-line2': 'Manage compliance in your company with the help of AI.',
@@ -778,6 +838,41 @@ document.addEventListener('DOMContentLoaded', function() {
         
 
     }
+
+    // AI Features Slider
+    document.querySelectorAll('[data-slider="ai-features"]').forEach(slider => {
+        const track = slider.querySelector('.ai-features-track');
+        const prevBtn = slider.querySelector('.slider-nav.prev');
+        const nextBtn = slider.querySelector('.slider-nav.next');
+
+        if (!track || !prevBtn || !nextBtn) return;
+
+        const updateButtons = () => {
+            const maxScrollLeft = track.scrollWidth - track.clientWidth - 1;
+            prevBtn.disabled = track.scrollLeft <= 0;
+            nextBtn.disabled = track.scrollLeft >= maxScrollLeft;
+        };
+
+        const getScrollAmount = () => {
+            const card = track.querySelector('.ai-feature-card');
+            if (!card) return track.clientWidth;
+            const cardStyle = window.getComputedStyle(track);
+            const gap = parseFloat(cardStyle.columnGap || cardStyle.gap || 0);
+            return card.getBoundingClientRect().width + gap;
+        };
+
+        prevBtn.addEventListener('click', () => {
+            track.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+        });
+
+        nextBtn.addEventListener('click', () => {
+            track.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+        });
+
+        track.addEventListener('scroll', updateButtons);
+        window.addEventListener('resize', updateButtons);
+        updateButtons();
+    });
 
 });
 

@@ -1247,6 +1247,220 @@ body {
     font-weight: 700;
 }
 
+/* AI Features Section */
+.ai-features {
+    padding: 5rem 0;
+    background: var(--bg-subtle);
+}
+
+.ai-features-header {
+    text-align: center;
+    max-width: 820px;
+    margin: 0 auto 3rem;
+}
+
+.ai-features-header h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.ai-features-header p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+}
+
+.ai-features-slider {
+    position: relative;
+}
+
+.ai-features-track {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% - 2rem) / 2);
+    gap: 2rem;
+    overflow-x: auto;
+    padding: 1rem 3rem 1rem 0.5rem;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.ai-features-track::-webkit-scrollbar {
+    height: 8px;
+}
+
+.ai-features-track::-webkit-scrollbar-thumb {
+    background: rgba(15, 23, 42, 0.12);
+    border-radius: 999px;
+}
+
+.ai-feature-card {
+    background: white;
+    border: none;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    scroll-snap-align: start;
+}
+
+.ai-feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 34px rgba(15, 23, 42, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.ai-feature-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    background: var(--primary-light);
+    color: var(--primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.ai-feature-card h4 {
+    font-size: 1.3rem;
+    color: var(--text-dark);
+    margin-bottom: 0.6rem;
+}
+
+.ai-feature-lead {
+    font-weight: 600;
+    color: var(--text-medium);
+    margin-bottom: 0.8rem;
+}
+
+.ai-feature-card p {
+    color: var(--text-light);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.slider-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid var(--border-light);
+    background: white;
+    color: var(--text-dark);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(15, 23, 42, 0.12);
+    transition: all 0.2s ease;
+    z-index: 2;
+}
+
+.slider-nav:hover {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+.slider-nav.prev {
+    left: -10px;
+}
+
+.slider-nav.next {
+    right: -10px;
+}
+
+.slider-nav[disabled] {
+    opacity: 0.4;
+    cursor: default;
+    box-shadow: none;
+}
+
+/* Privacy & Data Sovereignty Section */
+.data-sovereignty {
+    padding: 5rem 0;
+    background: var(--bg-white);
+}
+
+.sovereignty-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.sovereignty-text h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.sovereignty-text p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    line-height: 1.7;
+}
+
+.sovereignty-list {
+    list-style: none;
+    margin-top: 1.5rem;
+    padding: 0;
+}
+
+.sovereignty-list li {
+    position: relative;
+    padding-left: 1.6rem;
+    margin-bottom: 0.9rem;
+    color: var(--text-medium);
+    font-size: 1.05rem;
+}
+
+.sovereignty-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--accent);
+    font-weight: 700;
+}
+
+.sovereignty-brand {
+    background: var(--bg-light);
+    border: 1px solid var(--border-light);
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
+}
+
+.sovereignty-badge {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--primary);
+    background: var(--primary-light);
+    border-radius: 999px;
+    padding: 0.4rem 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.mistral-logo {
+    width: 180px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 1rem;
+}
+
+.mistral-caption {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    margin: 0;
+}
+
 /* Contact Section */
 .contact {
     padding: 5rem 0;
@@ -1635,6 +1849,28 @@ body {
     
     .nav-links.mobile-active {
         display: flex;
+    }
+
+    .ai-features-track {
+        grid-auto-columns: minmax(260px, 1fr);
+        padding-right: 0.5rem;
+    }
+
+    .slider-nav {
+        display: none;
+    }
+
+    .sovereignty-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .sovereignty-list {
+        text-align: left;
+        max-width: 520px;
+        margin-left: auto;
+        margin-right: auto;
     }
     
     .language-switcher {
