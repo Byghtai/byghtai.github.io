@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780.59 317.19" role="img" aria-label="maiqo logo">
+  <defs>
+    <filter id="blurStar" x="-30%" y="-30%" width="160%" height="160%" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="0">
+        <!-- Blur peaks only during the two fast swaps (matches the GIF's motion blur) -->
+        <animate attributeName="stdDeviation"
+                 dur="7.38s" repeatCount="indefinite"
+                 keyTimes="0;0.439;0.446;0.454;0.817;0.824;0.832;1"
+                 values="0;0;2.4;0;0;2.4;0;0"/>
+      </feGaussianBlur>
+    </filter>
+
+    <filter id="blurCheck" x="-30%" y="-30%" width="160%" height="160%" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="0">
+        <animate attributeName="stdDeviation"
+                 dur="7.38s" repeatCount="indefinite"
+                 keyTimes="0;0.439;0.446;0.454;0.817;0.824;0.832;1"
+                 values="0;0;2.0;0;0;2.0;0;0"/>
+      </feGaussianBlur>
+    </filter>
+
+    <style><![CDATA[
+      .word { fill: #8b5cf6; }
+      .icon { fill: #33b7bc; }
+
+      /* GIF timing: 246 frames * 30ms = 7.38s */
+      :root { --dur: 7.38s; }
+
+      /* Make transforms predictable */
+      #star, #check {
+        transform-box: fill-box;
+        transform-origin: 50% 50%;
+        will-change: transform, opacity;
+      }
+
+      /* Key moment fractions (based on frame analysis):
+         star visible: frames 0..107  => 0.000..0.439
+         check visible: frames 108..201 => 0.439..0.817
+         star visible again: frames 202..245 => 0.817..1.000
+         Swap happens in ~3 frames (~90ms) around 0.439 and 0.817.
+      */
+
+      /* Star: hold, snap-out with blur, stay hidden, snap-in with blur, hold */
+      #star {
+        filter: url(#blurStar);
+        /* keep overall timing linear, but ease the swap segments inside keyframes */
+        animation: starCycle var(--dur) linear infinite;
+      }
+      @keyframes starCycle {
+        /* Hold star */
+        0%, 43.9% { opacity: 1; transform: translate(0,0) rotate(0deg) scale(1);
+          animation-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1); }
+
+        /* Swap 1: star eases out (slightly longer + smoother) */
+        44.6% { opacity: 0.6; transform: translate(6px,-5px) rotate(10deg) scale(0.95);
+          animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1); }
+        45.0% { opacity: 0.2; transform: translate(10px,-8px) rotate(18deg) scale(0.90); }
+        45.4% { opacity: 0; transform: translate(14px,-10px) rotate(24deg) scale(0.86); }
+
+        /* Hidden while check is on */
+        81.7% { opacity: 0; transform: translate(14px,-10px) rotate(24deg) scale(0.86);
+          animation-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1); }
+
+        /* Swap 2: star comes back with a tiny overshoot */
+        82.2% { opacity: 0.2; transform: translate(-10px,8px) rotate(-18deg) scale(0.90);
+          animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1); }
+        82.8% { opacity: 0.7; transform: translate(-4px,3px) rotate(-6deg) scale(1.02); }
+        83.2% { opacity: 1; transform: translate(0,0) rotate(5deg) scale(1.05); }
+        84.0%, 100% { opacity: 1; transform: translate(0,0) rotate(0deg) scale(1); }
+      }
+
+      /* Check: hidden, snap-in with blur, hold, snap-out with blur */
+      #check {
+        filter: url(#blurCheck);
+        animation: checkCycle var(--dur) linear infinite;
+      }
+      @keyframes checkCycle {
+        /* Hidden while star is on */
+        0%, 43.9% { opacity: 0; transform: translate(-14px,10px) rotate(-24deg) scale(0.86);
+          animation-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1); }
+
+        /* Swap 1: check snaps in + settles */
+        44.6% { opacity: 0.2; transform: translate(-10px,8px) rotate(-18deg) scale(0.90);
+          animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1); }
+        45.0% { opacity: 0.7; transform: translate(-4px,3px) rotate(-6deg) scale(1.02); }
+        45.4% { opacity: 1; transform: translate(0,0) rotate(5deg) scale(1.05); }
+        46.2% { opacity: 1; transform: translate(0,0) rotate(0deg) scale(1); }
+
+        /* Hold */
+        81.7% { opacity: 1; transform: translate(0,0) rotate(0deg) scale(1); }
+
+        /* Swap 2: check spins/shrinks out */
+        82.2% { opacity: 0.6; transform: translate(6px,-5px) rotate(10deg) scale(0.95);
+          animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1); }
+        82.6% { opacity: 0.2; transform: translate(10px,-8px) rotate(18deg) scale(0.90); }
+        83.0%, 100% { opacity: 0; transform: translate(14px,-10px) rotate(24deg) scale(0.86); }
+      }
+
+      /* Accessibility: reduce motion */
+      @media (prefers-reduced-motion: reduce) {
+        #star, #check { animation: none !important; }
+        #check { opacity: 0 !important; }
+        #star { opacity: 1 !important; filter: none !important; }
+      }
+    ]]></style>
+  </defs>
+
+  <!-- Wordmark (identical to the provided SVGs) -->
+  <g>
+    <path class="word" d="M521.42,181.95c0,22.83-3.05,36.86-13.19,44.71l-7.36-7.36c7.86-6.02,10.03-17.32,10.03-37.35,0-35.38-6.69-43.61-39.21-43.61s-39.41,8.23-39.41,43.61,6.7,43.43,39.41,43.43c6.88,0,12.61-.37,17.36-1.29l.67.67,7.35,7.35,5.83,5.83-7.1,7.1-10.71-10.71c-4.03.42-8.49.61-13.4.61-40.55,0-49.93-13.01-49.93-52.99s9.38-53.17,49.93-53.17,49.73,13,49.73,53.17Z"/>
+    <path class="word" d="M69.36,130.02h10v17h.38c3.24-10.52,11.44-17.97,34.71-17.97s30.9,8.03,34.52,20.27c4.2-14.34,15.64-20.27,37.57-20.27,30.33,0,36.81,13.58,36.81,40.92v64.05h-10v-63.89c0-20.47-2.88-31.56-28.03-31.56-26.68,0-33.97,9.18-33.97,33.28v62.17h-10v-63.89c0-20.47-3.07-31.56-28.41-31.56s-33.59,8.99-33.59,33.28v62.17h-10v-104Z"/>
+    <path class="word" d="M254.39,204.06c0-22.96,14.16-30.04,44-30.04h35.96v-7.88c0-21.94-7.82-27.19-33.38-27.19-22.13,0-32.62,3.19-32.62,22.31v.75h-11v-1.72c0-24.87,15.17-30.99,43.02-30.99,32.65,0,43.98,8.61,43.98,36.73v67.98h-10v-16h-.19c-3.83,9.76-10.71,17.22-38.45,17.22s-41.32-7.65-41.32-31.18ZM297.25,225.87c28.69,0,37.11-8.99,37.11-31.37v-11.48h-33.86c-26.78,0-35.77,4.97-35.77,20.66,0,18.17,10.71,22.19,32.52,22.19Z"/>
+    <path class="word" d="M379.36,85.02h10v22h-10v-22ZM379.36,130.02h10v104h-10v-104Z"/>
+    <path class="word" d="M549.8,181.96c0-40.17,9.37-53.18,49.92-53.18s49.73,13.01,49.73,53.18-9.37,52.99-49.73,52.99-49.92-13.01-49.92-52.99ZM599.73,225.38c32.52,0,39.21-8.23,39.21-43.42s-6.69-43.61-39.21-43.61-39.4,8.23-39.4,43.61,6.7,43.42,39.4,43.42Z"/>
+  </g>
+
+  <!-- Icon (animated like the GIF: quick swap with motion blur + tiny settle) -->
+  <g>
+    <path id="star" class="icon" d="M689.45,39.71h0c.82,29.43,24.48,53.1,53.92,53.92h0s0,0,0,0c-29.43.82-53.1,24.48-53.92,53.92h0s0,0,0,0c-.82-29.43-24.48-53.1-53.92-53.92h0s0,0,0,0c29.43-.82,53.1-24.48,53.92-53.92h0Z"/>
+    <polygon id="check" class="icon" points="682.67 127.94 651.61 96.88 664.19 84.29 682.67 102.78 726.14 59.31 738.72 71.9 682.67 127.94"/>
+  </g>
+</svg>
