@@ -1113,7 +1113,8 @@ body {
 }
 
 .feature-card:nth-child(2) .feature-icon,
-.feature-card:nth-child(4) .feature-icon {
+.feature-card:nth-child(4) .feature-icon,
+.feature-card:nth-child(6) .feature-icon {
     background: var(--accent);
 }
 
