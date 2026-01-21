@@ -1,7 +1,7 @@
 // Internationalization object
 const i18n = {
     de: {
-        'page-title': 'maiqo - Compliance kann einfach sein. Verabschieden Sie sich von Redundanzen!',
+        'page-title': 'maiqo - Audit-ready by design',
         'nav-features': 'Features',
         'nav-about': 'Über uns',
         'nav-contact': 'Kontakt',
@@ -216,7 +216,7 @@ const i18n = {
         'datenschutz-stand': 'Stand: 14.01.2026'
     },
     en: {
-        'page-title': 'maiqo - Compliance can be simple. Say goodbye to redundancies!',
+        'page-title': 'maiqo - Audit-ready by design',
         'nav-features': 'Features',
         'nav-about': 'About',
         'nav-contact': 'Contact',
