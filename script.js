@@ -93,7 +93,7 @@ const i18n = {
         'stat-support': 'Support',
         'jobs-title': 'Karriere bei maiqo',
         'jobs-subtitle': 'Werde Teil unseres Teams und gestalte die Zukunft der Compliance-Automatisierung mit',
-        'job-1-title': 'Senior Full-Stack Developer (Founding Engineer) – 100% Remote – Next.js / TypeScript (SaaS)',
+        'job-1-title': 'Senior Full-Stack Developer (Founding Engineer) (m/w/d)',
         'job-1-description': 'Entwickle unsere innovative KI-gestützte Compliance-Plattform mit modernen Technologien.',
         'job-2-title': 'Compliance Expert / Consultant',
         'job-2-description': 'Berate Kunden bei der Implementierung von Compliance-Standards und entwickle Best Practices.',
@@ -226,10 +226,11 @@ const i18n = {
         'datenschutz-beschwerde-aufsichtsbehoerde': 'Sie können sich jederzeit mit einer Beschwerde an eine Aufsichtsbehörde wenden, z. B. an die zuständige Aufsichtsbehörde des Bundeslands Ihres Wohnsitzes oder an die für uns als verantwortliche Stelle zuständige Behörde.',
         'datenschutz-liste-aufsichtsbehoerden': 'Eine Liste der Aufsichtsbehörden (für den nichtöffentlichen Bereich) mit Anschrift finden Sie unter:',
         'datenschutz-stand': 'Stand: 14.01.2026',
-        'job-page-title': 'Senior Full-Stack Developer (Founding Engineer) - maiqo',
+        'job-page-title': 'Senior Full-Stack Developer (Founding Engineer) (m/w/d) - maiqo',
         'job-back-link': '<i class="fas fa-arrow-left"></i> Zurück zu allen Stellenausschreibungen',
-        'job-detail-title': 'Senior Full-Stack Developer (Founding Engineer)',
-        'job-meta-remote': '100% Remote',
+        'job-detail-title': 'Senior Full-Stack Developer (Founding Engineer) (m/w/d)',
+        'job-meta-remote': 'Remote',
+        'job-meta-time': 'Vollzeit/Teilzeit',
         'job-meta-tech': 'Next.js / TypeScript',
         'job-meta-saas': 'SaaS',
         'job-intro-1': 'Wir sind <strong>maiqo</strong> und bauen eine moderne, KI-native SaaS-Anwendung für Compliance-Management und auditfähige Nachweisführung. Unsere Kund:innen sind Großkonzerne und stark regulierte Organisationen, die viele Regelwerke (z. B. NIS2, DORA, ISO-Normen) effizient steuern und jederzeit reportfähig nachweisen müssen.',
@@ -267,8 +268,10 @@ const i18n = {
         'job-section-language': 'Sprache',
         'job-language-text': 'Deutsch ist unsere bevorzugte Arbeitssprache. Wenn du dich wohler auf Englisch fühlst, ist das ebenfalls kein Problem.',
         'job-section-apply': 'Bewerbung',
-        'job-apply-text-1': 'Schick uns gerne deinen CV und ein paar Zeilen zu dir an <a href="mailto:apply@maiqo.io">apply@maiqo.io</a>.',
-        'job-apply-text-2': 'Wenn du hast: GitHub/Portfolio oder ein Projekt, auf das du stolz bist.'
+        'job-apply-text-1': 'Schick uns gerne deinen CV und ein paar Zeilen zu dir an <a href="mailto:hello@maiqo.io">hello@maiqo.io</a>.',
+        'job-apply-text-2': 'Wenn du hast: GitHub/Portfolio oder ein Projekt, auf das du stolz bist.',
+        'hiring-hero-title': 'Werde Teil von maiqo',
+        'hiring-hero-subtitle': 'Gestalte mit uns die Zukunft der KI-gestützten Compliance. Wir suchen talentierte Menschen, die etwas bewegen wollen.'
     },
     en: {
         'page-title': 'maiqo - Audit-ready by design',
@@ -363,7 +366,7 @@ const i18n = {
         'stat-support': 'Support',
         'jobs-title': 'Careers at maiqo',
         'jobs-subtitle': 'Join our team and shape the future of compliance automation',
-        'job-1-title': 'Senior Full-Stack Developer (Founding Engineer) – 100% Remote – Next.js / TypeScript (SaaS)',
+        'job-1-title': 'Senior Full-Stack Developer (Founding Engineer) (m/f/d)',
         'job-1-description': 'Develop our innovative AI-powered compliance platform using modern technologies.',
         'job-2-title': 'Compliance Expert / Consultant',
         'job-2-description': 'Advise clients on implementing compliance standards and develop best practices.',
@@ -497,10 +500,11 @@ const i18n = {
         'datenschutz-beschwerde-aufsichtsbehoerde': 'You can at any time lodge a complaint with a supervisory authority, e.g. with the competent supervisory authority of the federal state of your residence or with the authority responsible for us as the responsible body.',
         'datenschutz-liste-aufsichtsbehoerden': 'A list of supervisory authorities (for the non-public sector) with address can be found at:',
         'datenschutz-stand': 'Last updated: January 14, 2026',
-        'job-page-title': 'Senior Full-Stack Developer (Founding Engineer) - maiqo',
+        'job-page-title': 'Senior Full-Stack Developer (Founding Engineer) (m/f/d) - maiqo',
         'job-back-link': '<i class="fas fa-arrow-left"></i> Back to all job postings',
-        'job-detail-title': 'Senior Full-Stack Developer (Founding Engineer)',
-        'job-meta-remote': '100% Remote',
+        'job-detail-title': 'Senior Full-Stack Developer (Founding Engineer) (m/f/d)',
+        'job-meta-remote': 'Remote',
+        'job-meta-time': 'Full-time / Part-time',
         'job-meta-tech': 'Next.js / TypeScript',
         'job-meta-saas': 'SaaS',
         'job-intro-1': 'We are <strong>maiqo</strong> and are building a modern, AI-native SaaS application for compliance management and audit-ready evidence management. Our customers are large corporations and heavily regulated organizations that need to efficiently manage many regulatory frameworks (e.g., NIS2, DORA, ISO standards) and demonstrate compliance at all times.',
@@ -538,8 +542,10 @@ const i18n = {
         'job-section-language': 'Language',
         'job-language-text': 'German is our preferred working language. If you feel more comfortable in English, that\'s also not a problem.',
         'job-section-apply': 'Application',
-        'job-apply-text-1': 'Please send us your CV and a few lines about yourself to <a href="mailto:apply@maiqo.io">apply@maiqo.io</a>.',
-        'job-apply-text-2': 'If you have: GitHub/Portfolio or a project you\'re proud of.'
+        'job-apply-text-1': 'Please send us your CV and a few lines about yourself to <a href="mailto:hello@maiqo.io">hello@maiqo.io</a>.',
+        'job-apply-text-2': 'If you have: GitHub/Portfolio or a project you\'re proud of.',
+        'hiring-hero-title': 'Join maiqo',
+        'hiring-hero-subtitle': 'Shape the future of AI-powered compliance with us. We are looking for talented people who want to make a difference.'
     }
 };
 

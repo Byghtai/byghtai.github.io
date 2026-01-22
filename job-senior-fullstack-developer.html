@@ -13,6 +13,54 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
+    <style>
+        /* Hiring Hero Banner Styles */
+        .hiring-hero {
+            background: linear-gradient(135deg, #8b5cf6 0%, #8b5cf6 50%, #33b7bc 100%);
+            padding: 150px 0 50px;
+            text-align: center;
+            color: white;
+            margin-top: 0;
+        }
+        
+        .hiring-hero .container {
+            padding-top: 2rem;
+        }
+        
+        .hiring-hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            margin-top: 0;
+        }
+        
+        .hiring-hero p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        @media (max-width: 768px) {
+            .hiring-hero {
+                padding: 120px 0 40px;
+            }
+            
+            .hiring-hero .container {
+                padding-top: 1.5rem;
+            }
+            
+            .hiring-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hiring-hero p {
+                font-size: 1rem;
+                padding: 0 1rem;
+            }
+        }
+    </style>
+    
     <!-- Cookiebot Script -->
     <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="d335a524-fdc6-45ec-a661-0bfd51428978" data-blockingmode="auto" type="text/javascript"></script>
 </head>
@@ -48,22 +96,34 @@
         </nav>
     </header>
 
+    <!-- Hiring Hero -->
+    <section class="hiring-hero">
+        <div class="container">
+            <h1 data-i18n="hiring-hero-title">Werde Teil von maiqo</h1>
+            <p data-i18n="hiring-hero-subtitle">Gestalte mit uns die Zukunft der KI-gestützten Compliance. Wir suchen talentierte Menschen, die etwas bewegen wollen.</p>
+        </div>
+    </section>
+
     <!-- Main Content -->
     <main class="job-page">
         <div class="container">
             <div class="job-content">
                 <div class="job-back-link">
-                    <a href="index.html#jobs" data-i18n="job-back-link">
+                    <a href="/#jobs" data-i18n="job-back-link">
                         <i class="fas fa-arrow-left"></i> Zurück zu allen Stellenausschreibungen
                     </a>
                 </div>
                 
                 <div class="job-header-section">
-                    <h1 data-i18n="job-detail-title">Senior Full-Stack Developer (Founding Engineer)</h1>
+                    <h1 data-i18n="job-detail-title">Senior Full-Stack Developer (Founding Engineer) (m/w/d)</h1>
                     <div class="job-meta">
                         <span class="job-meta-item">
                             <i class="fas fa-briefcase"></i>
                             <span data-i18n="job-meta-remote">100% Remote</span>
+                        </span>
+                        <span class="job-meta-item">
+                            <i class="fas fa-clock"></i>
+                            <span data-i18n="job-meta-time">Vollzeit / Teilzeit</span>
                         </span>
                         <span class="job-meta-item">
                             <i class="fas fa-code"></i>
@@ -148,7 +208,7 @@
 
                 <section class="job-section job-apply-section">
                     <h2 data-i18n="job-section-apply">Bewerbung</h2>
-                    <p data-i18n="job-apply-text-1">Schick uns gerne deinen CV und ein paar Zeilen zu dir an <a href="mailto:apply@maiqo.io">apply@maiqo.io</a>.</p>
+                    <p data-i18n="job-apply-text-1">Schick uns gerne deinen CV und ein paar Zeilen zu dir an <a href="mailto:hello@maiqo.io">hello@maiqo.io</a>.</p>
                     <p data-i18n="job-apply-text-2">Wenn du hast: GitHub/Portfolio oder ein Projekt, auf das du stolz bist.</p>
                 </section>
             </div>
