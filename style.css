@@ -2038,6 +2038,11 @@ body {
         grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
     }
+    
+    /* Hero Section for tablet/middle width */
+    .hero-section {
+        padding-top: 200px;
+    }
 }
 
 /* Compliance Flow Responsive */
@@ -2161,7 +2166,7 @@ body {
     
     /* Hero Section Mobile Fixes */
     .hero-section {
-        padding-top: 100px;
+        padding-top: 200px;
         padding-bottom: 2rem;
         min-height: auto;
     }
@@ -2425,7 +2430,7 @@ body {
     
     /* Hero Section for very small screens */
     .hero-section {
-        padding-top: 90px;
+        padding-top: 120px;
         padding-bottom: 1.5rem;
     }
     
