@@ -149,6 +149,53 @@ body {
 }
 
 /* Hero Section */
+/* EU Flag Badge */
+.eu-flag-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+    backdrop-filter: blur(10px);
+}
+
+.eu-flag-icon {
+    font-size: 24px;
+    line-height: 1;
+    flex-shrink: 0;
+    display: inline-block;
+}
+
+.eu-flag-text {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .eu-flag-badge {
+        top: 1rem;
+        right: 1rem;
+        padding: 0.4rem 0.75rem;
+    }
+    
+    .eu-flag-icon {
+        width: 32px;
+        height: 21px;
+    }
+    
+    .eu-flag-text {
+        font-size: 0.8rem;
+    }
+}
+
 .hero, .hero-section {
     background: linear-gradient(135deg, #8b5cf6 0%, #8b5cf6 50%, #33b7bc 100%);
     min-height: 100vh;
