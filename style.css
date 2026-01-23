@@ -1474,25 +1474,22 @@ body {
 }
 
 .enterprise-cta {
-    background: white;
-    border-radius: 16px;
-    padding: 2.5rem;
+    padding: 2.5rem 0;
     text-align: center;
     max-width: 700px;
     margin: 0 auto;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
 .enterprise-cta p {
-    color: var(--text-dark);
+    color: white;
     font-size: 1.3rem;
     font-weight: 600;
     margin-bottom: 1.5rem;
 }
 
 .btn-enterprise-cta {
-    background: #8b5cf6;
-    color: white;
+    background: white;
+    color: #8b5cf6;
     padding: 1rem 2.5rem;
     border-radius: 8px;
     font-size: 1.1rem;
@@ -1502,12 +1499,13 @@ body {
     transition: all 0.3s ease;
     border: none;
     cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .btn-enterprise-cta:hover {
-    background: #7c3aed;
+    background: rgba(255, 255, 255, 0.95);
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(139, 92, 246, 0.4);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
 @media (max-width: 968px) {
@@ -1521,8 +1519,7 @@ body {
     }
     
     .enterprise-cta {
-        padding: 2rem 1.5rem;
-        margin: 0 1rem;
+        padding: 2rem 1rem;
     }
     
     .enterprise-cta p {
