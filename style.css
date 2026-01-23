@@ -1380,6 +1380,156 @@ body {
     box-shadow: none;
 }
 
+/* Enterprise Compliance Section */
+.enterprise-compliance {
+    padding: 5rem 0;
+    background: #8b5cf6;
+}
+
+.enterprise-compliance-header {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 4rem;
+}
+
+.enterprise-compliance-header h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: white;
+    font-weight: 700;
+}
+
+.enterprise-compliance-header p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.enterprise-compliance-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.enterprise-card {
+    background: white;
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.enterprise-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+}
+
+.enterprise-card-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 12px;
+    background: #8b5cf6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+.enterprise-card h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+    font-weight: 700;
+}
+
+.enterprise-card > p {
+    color: var(--text-medium);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.enterprise-card-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.enterprise-card-list li {
+    color: var(--text-dark);
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.enterprise-card-list li::before {
+    content: "✓";
+    color: var(--accent);
+    font-weight: 700;
+    margin-right: 0.5rem;
+}
+
+.enterprise-cta {
+    background: white;
+    border-radius: 16px;
+    padding: 2.5rem;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.enterprise-cta p {
+    color: var(--text-dark);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.btn-enterprise-cta {
+    background: #8b5cf6;
+    color: white;
+    padding: 1rem 2.5rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-enterprise-cta:hover {
+    background: #7c3aed;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(139, 92, 246, 0.4);
+}
+
+@media (max-width: 968px) {
+    .enterprise-compliance-cards {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .enterprise-compliance-header h3 {
+        font-size: 2rem;
+    }
+    
+    .enterprise-cta {
+        padding: 2rem 1.5rem;
+        margin: 0 1rem;
+    }
+    
+    .enterprise-cta p {
+        font-size: 1.1rem;
+    }
+}
+
 /* Privacy & Data Sovereignty Section */
 .data-sovereignty {
     padding: 5rem 0;
