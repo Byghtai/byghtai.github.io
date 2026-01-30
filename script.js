@@ -997,40 +997,120 @@ document.addEventListener('DOMContentLoaded', function() {
 
     }
 
-    // AI Features Slider
-    document.querySelectorAll('[data-slider="ai-features"]').forEach(slider => {
-        const track = slider.querySelector('.ai-features-track');
-        const prevBtn = slider.querySelector('.slider-nav.prev');
-        const nextBtn = slider.querySelector('.slider-nav.next');
+    // AI Features Slider - Cleaner Version
+    const initAiSlider = () => {
+        const track = document.getElementById('aiFeaturesTrack');
+        const prevBtn = document.getElementById('aiPrevBtn');
+        const nextBtn = document.getElementById('aiNextBtn');
+        const dotsContainer = document.getElementById('aiSliderDots');
+        
+        if (!track || !prevBtn || !nextBtn || !dotsContainer) return;
 
-        if (!track || !prevBtn || !nextBtn) return;
+        const cards = track.querySelectorAll('.ai-feature-card');
+        if (cards.length === 0) return;
+        
+        // Dots erstellen
+        dotsContainer.innerHTML = '';
+        cards.forEach((_, index) => {
+            const dot = document.createElement('div');
+            dot.classList.add('slider-dot');
+            if (index === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => {
+                scrollToCard(index);
+            });
+            dotsContainer.appendChild(dot);
+        });
+        
+        const dots = dotsContainer.querySelectorAll('.slider-dot');
 
-        const updateButtons = () => {
-            const maxScrollLeft = track.scrollWidth - track.clientWidth - 1;
-            prevBtn.disabled = track.scrollLeft <= 0;
+        const updateState = () => {
+            // Active Dot berechnen
+            const scrollLeft = track.scrollLeft;
+            const cardWidth = cards[0].offsetWidth; // + gap theoretisch, aber für center snap reicht offsetWidth ca.
+            const containerCenter = scrollLeft + (track.clientWidth / 2);
+            
+            // Finde Karte, die am nächsten zur Mitte ist
+            let closestIndex = 0;
+            let minDistance = Infinity;
+
+            cards.forEach((card, index) => {
+                const cardCenter = card.offsetLeft + (card.offsetWidth / 2);
+                const distance = Math.abs(containerCenter - cardCenter);
+                if (distance < minDistance) {
+                    minDistance = distance;
+                    closestIndex = index;
+                }
+            });
+
+            // Update Dots
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === closestIndex);
+            });
+
+            // Update Buttons
+            const maxScrollLeft = track.scrollWidth - track.clientWidth - 5; // Buffer
+            prevBtn.disabled = track.scrollLeft <= 5;
             nextBtn.disabled = track.scrollLeft >= maxScrollLeft;
         };
 
-        const getScrollAmount = () => {
-            const card = track.querySelector('.ai-feature-card');
-            if (!card) return track.clientWidth;
-            const cardStyle = window.getComputedStyle(track);
-            const gap = parseFloat(cardStyle.columnGap || cardStyle.gap || 0);
-            return card.getBoundingClientRect().width + gap;
+        const scrollToCard = (index) => {
+            const card = cards[index];
+            const cardLeft = card.offsetLeft;
+            const cardWidth = card.offsetWidth;
+            const trackWidth = track.clientWidth;
+            
+            // Zentriert scrollen
+            const targetScroll = cardLeft - (trackWidth / 2) + (cardWidth / 2);
+            
+            track.scrollTo({
+                left: targetScroll,
+                behavior: 'smooth'
+            });
         };
 
         prevBtn.addEventListener('click', () => {
-            track.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+            // Finde aktuellen Index und gehe eins zurück
+            const activeDotIndex = Array.from(dots).findIndex(d => d.classList.contains('active'));
+            if (activeDotIndex > 0) {
+                scrollToCard(activeDotIndex - 1);
+            } else {
+                 // Fallback falls Berechnung schief läuft: einfach scrollen
+                 const cardWidth = cards[0].offsetWidth + 24; // 24 = gap
+                 track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+            }
         });
 
         nextBtn.addEventListener('click', () => {
-            track.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+            const activeDotIndex = Array.from(dots).findIndex(d => d.classList.contains('active'));
+            if (activeDotIndex < cards.length - 1) {
+                scrollToCard(activeDotIndex + 1);
+            } else {
+                 const cardWidth = cards[0].offsetWidth + 24;
+                 track.scrollBy({ left: cardWidth, behavior: 'smooth' });
+            }
         });
 
-        track.addEventListener('scroll', updateButtons);
-        window.addEventListener('resize', updateButtons);
-        updateButtons();
-    });
+        track.addEventListener('scroll', () => {
+             // Debounce für Performance
+             if (window.requestAnimationFrame) {
+                 window.requestAnimationFrame(updateState);
+             } else {
+                 updateState();
+             }
+        });
+        
+        window.addEventListener('resize', updateState);
+        
+        // Initial call
+        setTimeout(updateState, 100); // Warten bis Layout fertig
+    };
+
+    // Initialize
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initAiSlider);
+    } else {
+        initAiSlider();
+    }
 
 });
 
