@@ -1,0 +1,5 @@
+# Statische Site: HTML/CSS/JS liegen im Repository-Root.
+# Ohne diese Angabe kann `netlify dev` ein falsches/leeres Publish-Verzeichnis
+# verwenden und liefert für http://localhost:8888/ einen 404.
+[build]
+  publish = "."
