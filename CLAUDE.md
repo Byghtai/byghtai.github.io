@@ -20,6 +20,7 @@ Requires the [Netlify CLI](https://docs.netlify.com/cli/get-started/). The site 
 ├── impressum.html                      # Legal / Impressum
 ├── datenschutz.html                    # Privacy policy
 ├── job-senior-fullstack-developer.html # Job detail page
+├── sitemap.xml                         # XML sitemap for search engines
 ├── script.js                           # All JS: i18n translations + interactive features
 ├── style.css                           # All CSS: custom design system, responsive
 ├── netlify.toml                        # Netlify config (publish = ".")
@@ -27,6 +28,13 @@ Requires the [Netlify CLI](https://docs.netlify.com/cli/get-started/). The site 
 ├── *.svg, *.ttf, favicon.*             # Assets (logos, fonts, favicons)
 └── netlify/                            # Netlify Functions (currently empty)
 ```
+
+## SEO / Sitemap Maintenance — REQUIRED
+- Keep `sitemap.xml` in sync whenever pages are added, removed, renamed, or their indexability changes.
+- Every new indexable page must be added to `sitemap.xml` with the correct canonical URL.
+- Removed or non-indexable pages must be removed from `sitemap.xml`.
+- If a page URL changes, update the corresponding `<loc>` entry in `sitemap.xml`.
+- `job-senior-fullstack-developer.html` is deactivated and serves only as a template/dummy page; ignore it for regular content updates and do not re-include it in `sitemap.xml` unless explicitly requested.
 
 ## Internationalization (DE/EN) — CRITICAL
 The site supports German and English. **Every text change must be made in both languages.**
