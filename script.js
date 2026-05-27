@@ -12,6 +12,9 @@ const i18n = {
         'hero-bullet-1': '✓ Continuous Compliance statt Audit-Stress',
         'hero-bullet-2': '✓ Intelligente Automatisierung von Dokumentation & Nachweisen',
         'hero-bullet-3': '✓ Klarheit über den tatsächlichen Compliance-Status',
+        'hero-eyebrow': 'KI-GESTÜTZTE CONTINUOUS COMPLIANCE',
+        'hero-sub-new': 'Mit intelligenter Automatisierung bist du immer audit-ready – auf Enterprise-Niveau.',
+        'hero-cta-how-it-works': 'Wie es funktioniert',
         'dashboard-title': 'Compliance Status',
         'dashboard-subtitle': 'Übersicht Ihrer aktuellen Implementierung',
         'kpi-controls': 'Controls',
@@ -307,6 +310,9 @@ const i18n = {
         'hero-bullet-1': '✓ Continuous compliance instead of audit stress',
         'hero-bullet-2': '✓ Intelligent automation of documentation & evidence',
         'hero-bullet-3': '✓ Clarity about the actual compliance status',
+        'hero-eyebrow': 'AI-POWERED CONTINUOUS COMPLIANCE',
+        'hero-sub-new': 'With intelligent automation, you\'re always audit-ready – at enterprise scale.',
+        'hero-cta-how-it-works': 'See how it works',
         'dashboard-title': 'Compliance Status',
         'dashboard-subtitle': 'Overview of your current implementation',
         'kpi-controls': 'Controls',
@@ -758,6 +764,20 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    // Hero product reveal on first scroll
+    const heroProductStage = document.querySelector('.hero-product-stage');
+    if (heroProductStage) {
+        let heroRevealed = false;
+        const revealHeroProduct = () => {
+            if (!heroRevealed && window.scrollY > 10) {
+                heroRevealed = true;
+                heroProductStage.classList.add('is-revealed');
+                window.removeEventListener('scroll', revealHeroProduct);
+            }
+        };
+        window.addEventListener('scroll', revealHeroProduct, { passive: true });
+    }
+
     // Smooth scrolling für alle Anchor-Links
     const navLinks = document.querySelectorAll('a[href^="#"]');
     
