@@ -800,21 +800,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Header Scroll-Effekt
     const header = document.querySelector('.header');
-    let lastScrollTop = 0;
 
-    window.addEventListener('scroll', function() {
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        
-        if (scrollTop > 100) {
-            header.style.background = 'rgba(255, 255, 255, 0.95)';
-            header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
-        } else {
-            header.style.background = 'rgba(255, 255, 255, 0.95)';
-            header.style.boxShadow = 'none';
-        }
-        
-        lastScrollTop = scrollTop;
-    });
+    const updateHeader = () => {
+        header.classList.toggle('is-scrolled', window.scrollY > 60);
+    };
+    window.addEventListener('scroll', updateHeader, { passive: true });
+    updateHeader();
 
     // Kontakt-Formular Handling (deaktiviert für Netlify)
     // Das Formular wird jetzt von Netlify verarbeitet
