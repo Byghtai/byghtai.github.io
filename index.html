@@ -265,54 +265,87 @@
         </div>
     </section>
 
-    <!-- Compliance Flow Section -->
-    <section id="compliance-flow" class="compliance-flow-section">
-        <div class="container">
-            <h3 data-i18n="flow-title">Einmal eingeben, überall compliant</h3>
-            <p class="flow-subtitle" data-i18n="flow-subtitle">Ihre Daten werden automatisch auf alle relevanten Standards und Gesetze gemappt</p>
-            
-            <div class="compliance-flow">
-                <div class="flow-step input-step">
-                    <div class="step-icon">
-                        <i class="fas fa-edit"></i>
-                    </div>
-                    <div class="step-content">
-                        <h4 data-i18n="step-input-title">Daten eingeben</h4>
-                        <p data-i18n="step-input-desc">Einmalige Erfassung Ihrer Informationen, Prozesse und Maßnahmen</p>
-                    </div>
-                </div>
-                
-                <div class="flow-arrow">
-                    <i class="fas fa-arrow-right"></i>
-                </div>
-                
-                <div class="flow-step mapping-step">
-                    <div class="step-icon ai-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <div class="step-content">
-                        <h4 data-i18n="step-ai-title">KI-Mapping</h4>
-                        <p data-i18n="step-ai-desc">Automatische Zuordnung zu allen relevanten Standards</p>
-                    </div>
+    <!-- Section 2: Einmal eingeben. Überall compliant. -->
+    <section id="how-it-works" class="s2 s2-v4">
+        <div class="s2-v4__wrap">
+            <div class="s2-v4__head">
+                <span class="s2-eyebrow">
+                    <span class="star"><img src="maiqo-star.svg" alt=""></span>
+                    <span data-i18n="s2-eyebrow">So funktioniert maiqo</span>
+                </span>
+                <h2 class="s2-h2">
+                    <span data-i18n="s2-h2-line1">Einmal eingeben.</span> <em data-i18n="s2-h2-em">Überall compliant.</em>
+                </h2>
+                <p class="s2-sub" style="max-width:560px;margin-left:auto;margin-right:auto;" data-i18n="s2-sub">
+                    Unternehmensdaten werden automatisch auf jeden Standard übersetzt.
+                </p>
+            </div>
 
-                </div>
-                
-                <div class="flow-arrow">
-                    <i class="fas fa-arrow-right"></i>
-                </div>
-                
-                <div class="flow-step output-step">
-                    <div class="standards-showcase">
-                        <div class="rotating-standard">
-                            <div class="standard-pill primary" id="rotating-pill" data-standard="iso27001">
-                                <span class="pill-text">ISO 27001</span>
-                                <div class="compliance-indicator">✓</div>
-                            </div>
-                        </div>
+            <div class="s2-v4__stage">
+                <!-- Connection lines — viewBox must stay 0 0 1280 380 to match chip anchor coords -->
+                <svg class="lines" viewBox="0 0 1280 380" preserveAspectRatio="none" aria-hidden="true">
+                    <!-- Input card → core (solid) -->
+                    <path d="M 345 190 C 440 190 520 190 594 190"
+                          stroke="#a78bfa" stroke-opacity="0.55"
+                          stroke-width="1.5" stroke-linecap="round" fill="none"/>
+                    <!-- Core → chip anchors (dashed) -->
+                    <path d="M 679.8 167.0 C 800.9 167.0 840 40 900 40"    stroke="#a78bfa" stroke-opacity="0.45" stroke-width="1.2" stroke-dasharray="3 4" stroke-linecap="round" fill="none"/>
+                    <path d="M 683.6 175.5 C 758.6 175.5 760 130 820 130"  stroke="#a78bfa" stroke-opacity="0.45" stroke-width="1.2" stroke-dasharray="3 4" stroke-linecap="round" fill="none"/>
+                    <path d="M 685.9 187.6 C 869.7 187.6 960 170 1020 170" stroke="#a78bfa" stroke-opacity="0.45" stroke-width="1.2" stroke-dasharray="3 4" stroke-linecap="round" fill="none"/>
+                    <path d="M 685.9 192.3 C 770.7 192.3 780 200 840 200"  stroke="#a78bfa" stroke-opacity="0.45" stroke-width="1.2" stroke-dasharray="3 4" stroke-linecap="round" fill="none"/>
+                    <path d="M 684.2 202.6 C 852.4 202.6 930 290 990 290"  stroke="#a78bfa" stroke-opacity="0.45" stroke-width="1.2" stroke-dasharray="3 4" stroke-linecap="round" fill="none"/>
+                    <path d="M 674.9 220.0 C 754.7 220.0 760 345 820 345"  stroke="#a78bfa" stroke-opacity="0.45" stroke-width="1.2" stroke-dasharray="3 4" stroke-linecap="round" fill="none"/>
+                    <!-- Landing dots at each chip anchor -->
+                    <circle cx="900"  cy="40"  r="2.25" fill="#a78bfa" opacity="0.55"/>
+                    <circle cx="820"  cy="130" r="2.25" fill="#a78bfa" opacity="0.55"/>
+                    <circle cx="1020" cy="170" r="2.25" fill="#a78bfa" opacity="0.55"/>
+                    <circle cx="840"  cy="200" r="2.25" fill="#a78bfa" opacity="0.55"/>
+                    <circle cx="990"  cy="290" r="2.25" fill="#a78bfa" opacity="0.55"/>
+                    <circle cx="820"  cy="345" r="2.25" fill="#a78bfa" opacity="0.55"/>
+                </svg>
+
+                <!-- Input card (left) -->
+                <div class="s2-v4__input">
+                    <span class="kicker" data-i18n="s2-kicker">Deine Daten</span>
+                    <h4 class="title" data-i18n="s2-title">Ein zentrales Datenmodell</h4>
+                    <div class="rows">
+                        <div class="row"><span class="dot"></span><b data-i18n="s2-row-policies">Richtlinien</b><span class="v">28</span></div>
+                        <div class="row"><span class="dot"></span><b data-i18n="s2-row-implementations">Umsetzungsbeschreibungen</b><span class="v">142</span></div>
+                        <div class="row"><span class="dot"></span><b data-i18n="s2-row-evidence">Nachweise</b><span class="v">2 481</span></div>
                     </div>
-                    <div class="step-content">
-                        <h4 data-i18n="step-output-title">Vollständige Compliance</h4>
-                        <p data-i18n="step-output-desc">Alle Standards automatisch erfüllt und audit-ready</p>
+                </div>
+
+                <!-- Core orb (centre) -->
+                <div class="s2-v4__core"><img src="maiqo-star.svg" alt=""></div>
+                <span class="s2-v4__core-label" data-i18n="s2-core-label">KI-Mapping</span>
+
+                <!-- Target chips (right) — left/top pin the check-icon center to SVG anchor coords -->
+                <div class="s2-v4__targets">
+                    <!-- left = calc(ax/1280 * 100% - 18px) so the check-icon center
+                         tracks the SVG anchor regardless of actual stage width      -->
+                    <div class="s2-v4__target" style="left:calc(70.3125% - 18px);top:23px">
+                        <span class="check"><img src="maiqo-check.svg" alt=""></span>
+                        ISO 27001<span class="pct">100%</span>
+                    </div>
+                    <div class="s2-v4__target" style="left:calc(64.0625% - 18px);top:113px">
+                        <span class="check"><img src="maiqo-check.svg" alt=""></span>
+                        TISAX<span class="pct">95%</span>
+                    </div>
+                    <div class="s2-v4__target" style="left:calc(79.6875% - 18px);top:153px">
+                        <span class="check"><img src="maiqo-check.svg" alt=""></span>
+                        NIS-2<span class="pct">92%</span>
+                    </div>
+                    <div class="s2-v4__target" style="left:calc(65.625% - 18px);top:183px">
+                        <span class="check"><img src="maiqo-check.svg" alt=""></span>
+                        DORA<span class="pct">87%</span>
+                    </div>
+                    <div class="s2-v4__target s2-v4__target--new" style="left:calc(77.34375% - 18px);top:273px">
+                        <span class="check"><img src="maiqo-check.svg" alt=""></span>
+                        EU AI Act<span class="pct">78%</span>
+                    </div>
+                    <div class="s2-v4__target" style="left:calc(64.0625% - 18px);top:328px">
+                        <span class="check"><img src="maiqo-check.svg" alt=""></span>
+                        ISO 9001<span class="pct">100%</span>
                     </div>
                 </div>
             </div>
