@@ -3612,6 +3612,10 @@ body {
     min-height: 100vh;
 }
 
+/* Language-scoped content blocks (driven by data-lang on <html>) */
+[data-lang="en"] .trust-doc .legal-text > [lang="de"] { display: none; }
+[data-lang="de"] .trust-doc .legal-text > [lang="en"] { display: none; }
+
 .trust-header {
     text-align: center;
     padding: 2.5rem 0 2rem;
@@ -3677,6 +3681,7 @@ body {
     font-family: inherit;
     font-size: 0.9rem;
     color: var(--text-medium);
+    text-decoration: none;
     transition: background 0.15s, color 0.15s;
 }
 
@@ -3685,7 +3690,9 @@ body {
     color: var(--text-dark);
 }
 
-.trust-nav-item.is-active {
+html[data-trust-doc="privacy-policy"] .trust-nav-item[data-doc="privacy-policy"],
+html[data-trust-doc="agb"] .trust-nav-item[data-doc="agb"],
+html[data-trust-doc="security"] .trust-nav-item[data-doc="security"] {
     background: var(--primary-light);
     color: var(--primary);
     font-weight: 600;
@@ -3699,7 +3706,9 @@ body {
     opacity: 0.75;
 }
 
-.trust-nav-item.is-active i {
+html[data-trust-doc="privacy-policy"] .trust-nav-item[data-doc="privacy-policy"] i,
+html[data-trust-doc="agb"] .trust-nav-item[data-doc="agb"] i,
+html[data-trust-doc="security"] .trust-nav-item[data-doc="security"] i {
     opacity: 1;
 }
 
@@ -3727,7 +3736,14 @@ body {
     display: none;
 }
 
-.trust-doc.is-visible {
+html[data-trust-doc="privacy-policy"] #doc-privacy-policy,
+html[data-trust-doc="agb"] #doc-agb,
+html[data-trust-doc="security"] #doc-security {
+    display: block;
+}
+
+/* Fallback when no attribute is set (e.g. JS disabled): show privacy policy */
+html:not([data-trust-doc]) #doc-privacy-policy {
     display: block;
 }
 

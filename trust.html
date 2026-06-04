@@ -14,6 +14,16 @@
 
     <!-- Cookiebot Script -->
     <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="d335a524-fdc6-45ec-a661-0bfd51428978" data-blockingmode="auto" type="text/javascript"></script>
+
+    <!-- Trust Center: set active document from URL before first paint -->
+    <script>
+        (function () {
+            var VALID = ['privacy-policy', 'agb', 'security'];
+            var m = location.pathname.match(/^\/trust\/([^\/?#]+)\/?$/);
+            var target = m && VALID.indexOf(m[1]) !== -1 ? m[1] : 'privacy-policy';
+            document.documentElement.setAttribute('data-trust-doc', target);
+        })();
+    </script>
 </head>
 <body>
 
@@ -50,8 +60,8 @@
 
             <!-- Page header -->
             <div class="trust-header">
-                <h1>Trust Center</h1>
-                <p>Rechtliche Dokumente, Datenschutz und Informationssicherheit für die maiqo-Plattform</p>
+                <h1 data-i18n="trust-header-title">Trust Center</h1>
+                <p data-i18n="trust-header-subtitle">Rechtliche Dokumente, Datenschutz und Informationssicherheit für die maiqo-Plattform</p>
             </div>
 
             <!-- Two-column layout -->
@@ -59,20 +69,20 @@
 
                 <!-- Sidebar navigation -->
                 <aside class="trust-sidebar">
-                    <div class="trust-sidebar-label">Dokumente</div>
+                    <div class="trust-sidebar-label" data-i18n="trust-sidebar-label">Dokumente</div>
                     <nav class="trust-nav" role="navigation" aria-label="Dokument-Navigation">
-                        <button class="trust-nav-item is-active" data-doc="privacy-policy" aria-selected="true">
+                        <a class="trust-nav-item" data-doc="privacy-policy" href="/trust/privacy-policy">
                             <i class="fas fa-shield-alt"></i>
-                            <span>Datenschutzerklärung SaaS</span>
-                        </button>
-                        <button class="trust-nav-item" data-doc="agb" aria-selected="false">
+                            <span data-i18n="trust-nav-privacy">Datenschutzerklärung SaaS</span>
+                        </a>
+                        <a class="trust-nav-item" data-doc="agb" href="/trust/agb">
                             <i class="fas fa-file-contract"></i>
-                            <span>Allg. Vertragsbedingungen</span>
-                        </button>
-                        <button class="trust-nav-item" data-doc="security" aria-selected="false">
+                            <span data-i18n="trust-nav-agb">Allg. Vertragsbedingungen</span>
+                        </a>
+                        <a class="trust-nav-item" data-doc="security" href="/trust/security">
                             <i class="fas fa-lock"></i>
-                            <span>Informationssicherheit</span>
-                        </button>
+                            <span data-i18n="trust-nav-security">Informationssicherheit</span>
+                        </a>
                     </nav>
                 </aside>
 
@@ -80,18 +90,20 @@
                 <div class="trust-content">
 
                     <!-- Privacy Policy Document -->
-                    <div class="trust-doc is-visible" id="doc-privacy-policy">
+                    <div class="trust-doc" id="doc-privacy-policy">
                         <div class="trust-doc-header">
                             <div class="trust-doc-icon">
                                 <i class="fas fa-shield-alt"></i>
                             </div>
                             <div class="trust-doc-header-text">
-                                <h2>Datenschutzerklärung für die maiqo SaaS-Plattform</h2>
-                                <span class="trust-doc-meta">Stand: Juni 2026 &nbsp;·&nbsp; Version 1.0</span>
+                                <h2 data-i18n="trust-doc-privacy-title">Datenschutzerklärung für die maiqo SaaS-Plattform</h2>
+                                <span class="trust-doc-meta" data-i18n="trust-doc-privacy-meta">Stand: Juni 2026 &nbsp;·&nbsp; Version 1.0</span>
                             </div>
                         </div>
 
                         <div class="legal-text">
+
+                            <div lang="de">
 
                             <section id="geltungsbereich">
                                 <h2>1. Geltungsbereich</h2>
@@ -255,6 +267,174 @@
                                 <em>Stand: Juni 2026 &nbsp;·&nbsp; Fragen? <a href="mailto:ims@maiqo.io">ims@maiqo.io</a></em>
                             </div>
 
+                            </div><!-- /lang=de -->
+
+                            <div lang="en">
+
+                            <section>
+                                <h2>1. Scope</h2>
+                                <p>This privacy policy applies to the maiqo SaaS platform (hereinafter "platform") operated by maiqo GmbH. It is directed at all natural persons who access the platform in the context of a contractual relationship or whose personal data is processed in connection with the use of the platform.</p>
+                                <p>Separate information applies to the privacy policy for the <strong>marketing website maiqo.io</strong> (maiqo.io/datenschutz).</p>
+                            </section>
+
+                            <section>
+                                <h2>2. Controller</h2>
+                                <div class="contact-info">
+                                    <p><strong>maiqo GmbH</strong><br>
+                                    Christians-Platz 8, 22844 Norderstedt, Germany<br>
+                                    <strong>Email:</strong> <a href="mailto:ims@maiqo.io">ims@maiqo.io</a><br>
+                                    <strong>Phone:</strong> +49 (0) 40 66892413</p>
+                                </div>
+                            </section>
+
+                            <section>
+                                <h2>3. Data Protection Roles</h2>
+                                <p>In operating the platform, maiqo GmbH takes on two distinct data protection roles:</p>
+
+                                <h3>3.1 Controller</h3>
+                                <p>maiqo GmbH acts as <strong>controller</strong> within the meaning of the GDPR for the processing of data required to operate the platform itself. This applies in particular to the management of user accounts, authentication, license and subscription management, and platform security.</p>
+
+                                <h3>3.2 Processor</h3>
+                                <p>For personal data that customers enter into the platform as part of their own compliance processes (e.g. employee data in the context of trainings, audits or risk assessments), maiqo GmbH acts as a <strong>processor</strong> in accordance with Art. 28 GDPR. The respective corporate customer remains the controller for the processed data. The details of the commissioned processing are set out in the Data Processing Agreement (DPA), which is part of the main contract.</p>
+                            </section>
+
+                            <section>
+                                <h2>4. Categories of Data Processed</h2>
+
+                                <h3>As Controller</h3>
+                                <ul>
+                                    <li><strong>User data:</strong> name, email address, company affiliation, function/role</li>
+                                    <li><strong>Access and authentication data:</strong> login timestamps, session information, IP address</li>
+                                    <li><strong>Usage logs:</strong> features accessed, timestamps of actions, technical error logs</li>
+                                    <li><strong>Contract and billing data:</strong> company data, billing address, payment terms (as part of the license agreement)</li>
+                                </ul>
+
+                                <h3>As Processor</h3>
+                                <ul>
+                                    <li><strong>Compliance documents:</strong> policies, procedural instructions, process descriptions, evidence of controls</li>
+                                    <li><strong>Audit and review data:</strong> audit results, action plans, status reports</li>
+                                    <li><strong>Personal data in a compliance context:</strong> employee data, to the extent the customer enters such data into the platform as part of trainings, task assignments or evidence collection</li>
+                                </ul>
+                            </section>
+
+                            <section>
+                                <h2>5. Processing Purposes and Legal Bases</h2>
+
+                                <h3>As Controller</h3>
+                                <ul>
+                                    <li><strong>Provision and operation of the platform</strong> (Art. 6(1)(b) GDPR – performance of contract)</li>
+                                    <li><strong>User management and authentication</strong> (Art. 6(1)(b) GDPR)</li>
+                                    <li><strong>Billing and license management</strong> (Art. 6(1)(b) GDPR)</li>
+                                    <li><strong>IT security, operational stability, and protection against misuse</strong> (Art. 6(1)(f) GDPR – legitimate interest)</li>
+                                    <li><strong>Technical support and troubleshooting</strong> (Art. 6(1)(f) GDPR)</li>
+                                    <li><strong>Further development and quality improvement of the platform</strong> (Art. 6(1)(f) GDPR)</li>
+                                </ul>
+
+                                <h3>As Processor</h3>
+                                <p>Exclusively in accordance with documented instructions from the respective customer under the DPA. Independent processing for our own purposes does not take place.</p>
+                            </section>
+
+                            <section>
+                                <h2>6. Sub-processors</h2>
+                                <p>For the technical operation of the platform, maiqo GmbH uses carefully selected sub-processors. These are contractually bound to comply with data protection requirements. The categories used include:</p>
+                                <ul>
+                                    <li>Cloud infrastructure and hosting (EU-based data centers)</li>
+                                    <li>Database management and storage</li>
+                                    <li>Monitoring, logging, and alerting services</li>
+                                    <li>Authentication and identity management services</li>
+                                    <li>Customer support tools (for support requests only)</li>
+                                </ul>
+                                <p>An up-to-date and complete list of sub-processors is maintained in the DPA and is available on request. Customers are informed in good time of material changes to the sub-processor pool.</p>
+                            </section>
+
+                            <section>
+                                <h2>7. Data Storage and Deletion</h2>
+
+                                <h3>As Controller</h3>
+                                <ul>
+                                    <li><strong>User data:</strong> For the duration of the active contractual relationship. After the end of the contract or the termination of a user account, deletion takes place after a transition period of 30 days, unless statutory retention obligations apply.</li>
+                                    <li><strong>Contract and billing data:</strong> In accordance with commercial and tax retention requirements (usually 6–10 years).</li>
+                                    <li><strong>Technical log data:</strong> Rotating log archive, retained for up to 90 days.</li>
+                                </ul>
+
+                                <h3>As Processor</h3>
+                                <p>Deletion periods and procedures for customer data are governed by the terms of the DPA. At the latest 30 days after the end of the contract, or upon explicit instruction from the customer, data is fully deleted or made available to the customer in a common format.</p>
+                            </section>
+
+                            <section>
+                                <h2>8. Technical and Organizational Measures (TOMs)</h2>
+                                <p>maiqo GmbH operates the platform according to the current state of the art and employs comprehensive security measures:</p>
+                                <ul>
+                                    <li><strong>Encryption:</strong> TLS 1.2+ for data in transit; AES-256 for data at rest</li>
+                                    <li><strong>Access control:</strong> role-based access control (RBAC); principle of least privilege</li>
+                                    <li><strong>Authentication:</strong> support for multi-factor authentication (MFA); single sign-on (SSO)</li>
+                                    <li><strong>Network security:</strong> firewall protection, network segmentation, regular vulnerability scans</li>
+                                    <li><strong>Monitoring:</strong> continuous logging and alerting of security-relevant events</li>
+                                    <li><strong>Backup:</strong> regular encrypted data backups with documented recovery processes</li>
+                                    <li><strong>Incident management:</strong> defined process for detecting, reporting, and remediating security incidents</li>
+                                    <li><strong>Data centers:</strong> EU-based only; certified providers (ISO 27001)</li>
+                                </ul>
+                                <p>You can find detailed information about our security measures in the "Information Security" document (available shortly).</p>
+                            </section>
+
+                            <section>
+                                <h2>9. International Data Transfers</h2>
+                                <p>Where data is processed outside the European Economic Area (EEA), we ensure that an adequate level of protection is in place. The legal bases for this include in particular:</p>
+                                <ul>
+                                    <li>EU Standard Contractual Clauses (SCCs) under Art. 46(2)(c) GDPR</li>
+                                    <li>Adequacy decisions of the European Commission</li>
+                                    <li>Certification under the EU-US Data Privacy Framework (DPF) for correspondingly certified recipients</li>
+                                </ul>
+                                <p>Data is primarily processed on EU-based infrastructures. Details of any third-country transfers are documented in the DPA.</p>
+                            </section>
+
+                            <section>
+                                <h2>10. Rights of Data Subjects</h2>
+                                <p>Where maiqo GmbH acts as <strong>controller</strong>, you may assert the following rights vis-à-vis maiqo GmbH:</p>
+                                <ul>
+                                    <li><strong>Access</strong> to processed data (Art. 15 GDPR)</li>
+                                    <li><strong>Rectification</strong> of inaccurate data (Art. 16 GDPR)</li>
+                                    <li><strong>Erasure</strong> of data under statutory conditions (Art. 17 GDPR)</li>
+                                    <li><strong>Restriction</strong> of processing (Art. 18 GDPR)</li>
+                                    <li><strong>Data portability</strong> (Art. 20 GDPR)</li>
+                                    <li><strong>Objection</strong> to certain processing activities (Art. 21 GDPR)</li>
+                                    <li><strong>Complaint</strong> to a data protection supervisory authority (Art. 77 GDPR)</li>
+                                </ul>
+                                <p><strong>Note for users whose data is processed by their employer/customer:</strong> Where maiqo GmbH acts as a processor for your employer or a company, please first direct your requests to the respective controller (your employer / the relevant company). maiqo GmbH supports customers in fulfilling the rights of data subjects.</p>
+                                <p>To exercise your rights, please contact: <a href="mailto:ims@maiqo.io">ims@maiqo.io</a></p>
+                            </section>
+
+                            <section>
+                                <h2>11. Reporting Security Incidents</h2>
+                                <p>In the event of a personal data breach within the meaning of Art. 33 GDPR affecting customer data, maiqo GmbH informs the affected customer without undue delay, but no later than 72 hours after becoming aware of the incident, where possible. The notification contains all information necessary for the customer, as controller, to take further action.</p>
+                                <p>You can report security-related incidents or vulnerabilities to: <a href="mailto:security@maiqo.io">security@maiqo.io</a></p>
+                            </section>
+
+                            <section>
+                                <h2>12. Data Processing Agreement (DPA)</h2>
+                                <p>Corporate customers who use maiqo as a platform for processing personal data conclude a Data Processing Agreement with maiqo GmbH in accordance with Art. 28 GDPR. The DPA governs in particular:</p>
+                                <ul>
+                                    <li>Subject matter and duration of processing</li>
+                                    <li>Nature and purpose of processing</li>
+                                    <li>Categories of personal data</li>
+                                    <li>Rights and obligations of the controller</li>
+                                    <li>Technical and organizational measures</li>
+                                    <li>Use of sub-processors</li>
+                                </ul>
+                                <p>You can obtain the DPA on request at: <a href="mailto:legal@maiqo.io">legal@maiqo.io</a></p>
+                            </section>
+
+                            <section>
+                                <h2>13. Changes to this Privacy Policy</h2>
+                                <p>maiqo GmbH reserves the right to adapt this privacy policy in the event of material changes to processing activities, platform functions, or legal requirements. Users will be informed of material changes by email or via a notice in the platform. The date of the last update is given above.</p>
+                            </section>
+
+                            <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 2px solid var(--border-light); color: var(--text-light);">
+                                <em>Last updated: June 2026 &nbsp;·&nbsp; Questions? <a href="mailto:ims@maiqo.io">ims@maiqo.io</a></em>
+                            </div>
+
+                            </div><!-- /lang=en -->
+
                         </div>
                     </div>
                     <!-- /Privacy Policy -->
@@ -266,12 +446,14 @@
                                 <i class="fas fa-file-contract"></i>
                             </div>
                             <div class="trust-doc-header-text">
-                                <h2>Allgemeine Vertragsbedingungen</h2>
-                                <span class="trust-doc-meta">maiqo GmbH &nbsp;·&nbsp; Stand: Juni 2026</span>
+                                <h2 data-i18n="trust-doc-agb-title">Allgemeine Vertragsbedingungen</h2>
+                                <span class="trust-doc-meta" data-i18n="trust-doc-agb-meta">maiqo GmbH &nbsp;·&nbsp; Stand: Juni 2026</span>
                             </div>
                         </div>
 
                         <div class="legal-text">
+
+                            <div lang="de">
 
                             <section id="agb-1">
                                 <h2>1. Anwendungsbereich</h2>
@@ -484,6 +666,225 @@
                                 <em>Stand: Juni 2026 &nbsp;·&nbsp; Fragen? <a href="mailto:legal@maiqo.io">legal@maiqo.io</a></em>
                             </div>
 
+                            </div><!-- /lang=de -->
+
+                            <div lang="en">
+
+                            <p style="background: var(--bg-subtle); padding: 1rem 1.25rem; border-radius: 8px; font-size: 0.92rem; color: var(--text-light); margin-bottom: 2rem;"><em>This English version is provided for convenience. In case of discrepancies, the German version (above) prevails. The contract language is German.</em></p>
+
+                            <section>
+                                <h2>1. Scope</h2>
+                                <p><strong>1.1.</strong> The following terms and conditions form part of all contracts (in written and electronic form) between maiqo GmbH, Christians-Platz 8, 22844 Norderstedt, Germany (hereinafter "maiqo" or "provider") and the customer that are concluded for the provision of the SaaS service, support services ("support"), consulting services ("consulting") and/or development services ("development").</p>
+                                <p><strong>1.2</strong> Deviating terms and conditions of contractual partners shall not become part of the contract. Side agreements and other deviations from our contracts, license terms, or these terms and conditions require text form.</p>
+                                <p><strong>1.3</strong> Customers within the meaning of these provisions are exclusively entrepreneurs as defined in § 14 BGB, legal entities under public law, or special funds under public law.</p>
+                            </section>
+
+                            <section>
+                                <h2>2. Subject Matter, Conclusion of Contract</h2>
+                                <p><strong>2.1</strong> maiqo offers the customer an online SaaS service (accessed via browser/API) for a contract term that enables the customer to organize and manage services. For data and content entered by the customer into the SaaS service, maiqo also provides storage space. Handover of the underlying software is not part of the contract. There are no installation or delivery obligations.</p>
+                                <p><strong>2.2</strong> The provider offers the customer a paid right of use to the SaaS service. maiqo reserves the right to offer different versions of its offering from which the customer may choose and which include different scopes of use and functions/modules of the SaaS service.</p>
+                                <p><strong>2.3</strong> Support, consulting, and development services are provided separately according to the order documents (e.g. contingents, day rates).</p>
+                                <p><strong>2.4</strong> The provider may use subcontractors and cloud/infrastructure services. For third-party services that the customer obtains directly, the terms of those third parties apply.</p>
+                                <p><strong>2.5</strong> Beta/preview features may be provided "as is" without SLA/support and may be changed or deactivated at any time.</p>
+                                <p><strong>2.6</strong> The provider does not perform critical operational services within the meaning of Regulation (EU) 2022/2554 (DORA). The customer's core processes can be operated independently of the use of the tool.</p>
+                                <p><strong>2.7</strong> The provider does not provide regulatory advice and assumes no supervisory responsibility. The customer remains responsible for fulfilling its statutory obligations.</p>
+                                <p><strong>2.8</strong> The offers presented by maiqo constitute a non-binding offer in the legal sense. By placing an order, the customer makes a binding contractual offer. The provider may accept the offer by sending the customer an order confirmation in text form (e.g. email), by providing the service, or by issuing a payment request after submission of the order. Where multiple alternatives exist, the contract is concluded at the point in time at which one of these alternatives first occurs.</p>
+                                <p><strong>2.9</strong> The contract text is stored by maiqo.</p>
+                                <p><strong>2.10</strong> The customer must provide the requested contract data completely and accurately. If the data changes after the order, the customer is obliged to update its profile without undue delay.</p>
+                                <p><strong>2.11</strong> The customer must keep its password confidential and carefully secure access to the customer account. The customer is obliged to inform maiqo immediately if there are indications of misuse.</p>
+                                <p><strong>2.12</strong> The provider is entitled to interrupt the ongoing use due to maintenance work and other important reasons, provided that it informs the customer with reasonable advance notice. In urgent cases, prior notice may be omitted.</p>
+                            </section>
+
+                            <section>
+                                <h2>3. Right of Use</h2>
+                                <p><strong>3.1</strong> The copyright and exclusive right of use for objects created by maiqo (software including interfaces, websites, scripts, programs, graphics) remains solely with maiqo.</p>
+                                <p><strong>3.2</strong> Upon conclusion of the contract, the customer receives a simple, geographically unlimited right to use the subject matter of the contract within the agreed scope for its own purposes for the duration of the contract. No further rights are granted. Any mandatory rights under §§ 69d(2) and (3), 69e UrhG remain unaffected.</p>
+                                <p><strong>3.3</strong> Where open source software is integrated into the SaaS service, maiqo generally does not transfer any rights of use to it. The license terms of the respective open source software apply.</p>
+                                <p><strong>3.4</strong> The customer is not permitted to enable third parties or affiliated companies to use the SaaS service within its own scope. Internal use is permitted only to fulfill the functional purposes of the SaaS service.</p>
+                                <p><strong>3.5</strong> Reproduction or use of elements of the SaaS service in other publications is not permitted without the express consent of maiqo.</p>
+                                <p><strong>3.6</strong> If the customer uses the SaaS service to an extent that exceeds the granted rights of use qualitatively or quantitatively, it is obliged on request to immediately acquire the necessary rights of use.</p>
+                                <p><strong>3.7</strong> In the event of reasonable suspicion of a breach of the terms of use, statutory provisions or third-party rights, maiqo may block the use in question after prior notification.</p>
+                                <p><strong>3.8</strong> If the provider releases new versions, updates or upgrades during the term, the rights above also apply to them.</p>
+                                <p><strong>3.9</strong> With regard to its logo and any materials provided, the customer grants maiqo a simple right of use for advertising and marketing purposes. The customer may revoke this right by notice in text form.</p>
+                            </section>
+
+                            <section>
+                                <h2>4. Performance of the Service, Responsibility</h2>
+                                <p><strong>4.1</strong> maiqo provides the technical means to manage and organize content together with any interfaces made available.</p>
+                                <p><strong>4.2</strong> The customer can provide information and content via the specified interfaces.</p>
+                                <p><strong>4.3</strong> The customer is responsible for ensuring that the content provided by it is fully free of third-party rights and is legally suitable for the intended uses.</p>
+                                <p><strong>4.4</strong> The customer shall indemnify maiqo against all third-party claims asserted due to an infringement of their rights by content submitted by the customer.</p>
+                                <p><strong>4.5</strong> maiqo is entitled to adapt and further develop the SaaS service technically. In the event of material changes in performance to the disadvantage of the customer, the customer will be informed in advance and has a special right of termination with a notice period of 14 days as of the effective date of the change.</p>
+                                <p><strong>4.6</strong> Where the customer issues legal declarations within the SaaS service, maiqo only provides the technical representation. The customer is responsible for the substantive completeness, accuracy and effectiveness.</p>
+                                <p><strong>4.7</strong> The customer warrants that it operates a commercial enterprise or otherwise acts as or is treated as a merchant in legal transactions.</p>
+                                <p><strong>4.8</strong> The customer must notify maiqo of disruptions without undue delay and support maiqo to a reasonable extent in identifying and remedying them.</p>
+                            </section>
+
+                            <section>
+                                <h2>5. Customer Obligations from Other Contractual Relationships</h2>
+                                <p><strong>5.1</strong> The customer is itself responsible for archiving documents created with the SaaS service that it needs for evidence preservation or accounting purposes on a storage medium independent of the SaaS service.</p>
+                                <p><strong>5.2</strong> The customer is obliged to create its content under its own responsibility and is liable for compliance with applicable legal information and labeling obligations.</p>
+                                <p><strong>5.3</strong> The customer concludes its own contracts with third-party providers to which it has access via interfaces. maiqo only provides a technical means of connection.</p>
+                            </section>
+
+                            <section>
+                                <h2>6. Payment Terms</h2>
+                                <p><strong>6.1</strong> Use of the SaaS service is subject to charges, and a fee is agreed depending on the chosen offering.</p>
+                                <p><strong>6.2</strong> The fee consists of a flat annual fee and a monthly billed fee for support and consulting.</p>
+                                <p><strong>6.3</strong> The fee is due within 30 days of the invoice date. The flat fee is billed in advance for the respective payment period.</p>
+                                <p><strong>6.4</strong> The provider is entitled to unilaterally adjust the fee once a year in line with increases in costs (materials, wages, energy, levies). The price increase is communicated in text form at least two weeks before it takes effect. If the new price is 10% or more above the original price, the customer is entitled to terminate within two weeks of notification.</p>
+                                <p><strong>6.5</strong> In the event of significant payment default, maiqo is entitled to block the services provided at the customer's expense. Significance exists in particular if the arrears amount to a customary fee for two months.</p>
+                                <p><strong>6.6</strong> If the customer is in default for two consecutive months or with an amount equivalent to two months' fees, maiqo may terminate the contract without notice.</p>
+                                <p><strong>6.7</strong> In the event of termination by maiqo due to fault of the customer, maiqo is entitled to demand lump-sum damages amounting to 50% of the fee that would have been payable up to the end of the minimum contract term.</p>
+                            </section>
+
+                            <section>
+                                <h2>7. Data Protection</h2>
+                                <p><strong>7.1</strong> The customer is the controller (Art. 4 No. 7 GDPR) for the processing of personal data entered by it within the SaaS service. Use of the paid SaaS service requires the conclusion of a Data Processing Agreement (Art. 28(3) GDPR).</p>
+                                <p><strong>7.2</strong> Server-side collection and analysis of usage is necessary for access to the SaaS service and serves to optimize functionality, to support customer support requests, and for maintenance purposes. After the end of the service period, usage data is deleted after three months.</p>
+                                <p><strong>7.3</strong> Where the customer has concluded a contract for services with the provider, the provider may offer information about its own similar services via the email address provided at conclusion of the contract (§ 7(3) UWG). Objection is possible at any time.</p>
+                            </section>
+
+                            <section>
+                                <h2>8. Liability for Defects</h2>
+                                <p><strong>8.1</strong> maiqo warrants that all services are free of material defects and defects of title.</p>
+                                <p><strong>8.2</strong> Liability for defects does not extend to any open source software used. Liability for defects also does not exist for functions that no longer reflect the current state of the law due to legislative changes and that were not part of the agreed scope of services.</p>
+                                <p><strong>8.3</strong> In the event of a defect, the provider will provide subsequent performance within a reasonable period.</p>
+                                <p><strong>8.4</strong> Subsequent performance may be effected, at the provider's option, by repair or new delivery.</p>
+                                <p><strong>8.5</strong> Defect remediation may also be carried out by telephone or written instructions to the customer. If maiqo offers new updates/upgrades for defect remediation, the customer must accept them.</p>
+                                <p><strong>8.6</strong> In the case of a justified defect notice, the provider bears the expenses required for the purpose of subsequent performance. If it turns out that the defect notice was unjustified, the provider may demand reimbursement of the expenses incurred.</p>
+                                <p><strong>8.7</strong> If subsequent performance fails and a reasonable deadline has been set that allows for at least two attempts at repair, the customer may, at its option, withdraw from the contract or reduce the fee.</p>
+                                <p><strong>8.8</strong> Claims for defects become time-barred one year after delivery. If the provider has fraudulently concealed a defect or assumed a guarantee, the statutory provisions remain unaffected.</p>
+                                <p><strong>8.9</strong> Termination by the customer for rental services under § 543(2) sentence 1 no. 1 BGB is only permissible once maiqo has been given sufficient opportunity to remedy the defect and this has failed.</p>
+                            </section>
+
+                            <section>
+                                <h2>9. Liability</h2>
+                                <p><strong>9.1</strong> For damages other than to life, body or health, maiqo's liability is excluded insofar as the damages are not based on intentional or grossly negligent conduct by maiqo, a legal representative or vicarious agent, or there is no breach of material contractual obligations.</p>
+                                <p><strong>9.2</strong> For the recovery of data, maiqo is only liable to the extent that the customer has taken all necessary data backup precautions and has ensured that the data can be reconstructed from machine-readable material with reasonable effort.</p>
+                                <p><strong>9.3</strong> The exclusions of liability do not apply in the case of express warranties by maiqo, claims due to missing assured characteristics, claims under the Product Liability Act, or fraudulently concealed defects.</p>
+                            </section>
+
+                            <section>
+                                <h2>10. Term, Suspension</h2>
+                                <p><strong>10.1</strong> Unless otherwise agreed, paid use is agreed for a contract term of 12 months and is automatically extended by another 12 months unless terminated with 60 days' notice to the end of the respective contract period. At the customer's request, renewal may also be for 24 or 36 months.</p>
+                                <p><strong>10.2</strong> The right to terminate for good cause without observing a notice period remains unaffected.</p>
+                                <p><strong>10.3</strong> All terminations must be in text form.</p>
+                                <p><strong>10.4</strong> maiqo may take the following measures if there are indications of a breach of statutory provisions, third-party rights or these terms: (a) deletion of content, (b) warning, (c) limitation/restriction of use, (d) temporary suspension, (e) permanent suspension.</p>
+                                <p><strong>10.5</strong> In particular, acts that constitute interference with the technical design and maintenance of the use of the SaaS service are prohibited.</p>
+                                <p><strong>10.6</strong> Export functions are available during the term. Export takes place in a common machine-readable format (e.g. CSV, JSON, PDF).</p>
+                                <p><strong>10.7</strong> The provider deletes the data at the latest 60 days after the end of the contract, unless statutory retention obligations apply.</p>
+                                <p><strong>10.8</strong> Upon termination, the provider supports the orderly handover/exit measures under a separate agreement. The customer must request such support within 14 days of the end of the contract term.</p>
+                            </section>
+
+                            <section>
+                                <h2>11. Confidentiality</h2>
+                                <p><strong>11.1</strong> The parties undertake to maintain strict confidentiality regarding all confidential information that becomes known in connection with this contract, in particular business and trade secrets, and not to pass it on or otherwise exploit it.</p>
+                                <p><strong>11.2</strong> "Confidential information" means all information that one contracting party communicates or makes available to the other in connection with this contract, whether in written, oral, visual or electronic form, and which is marked as "confidential" or whose confidential nature results from the circumstances.</p>
+                                <p><strong>11.3</strong> Information shall not be deemed confidential if it (a) was lawfully acquired from third parties not bound by confidentiality, (b) was developed independently by a party, or (c) is or has become publicly known without fault.</p>
+                                <p><strong>11.4</strong> If a party is required to disclose information due to a mandatory legal requirement or an order of a public authority, the confidentiality obligation does not apply to the extent that disclosure is strictly necessary. The other party must be notified in writing in advance.</p>
+                                <p><strong>11.5</strong> The confidentiality obligation continues to apply for a period of five years after termination of the contract.</p>
+                            </section>
+
+                            <section>
+                                <h2>12. Final Provisions</h2>
+                                <p><strong>12.1</strong> The provider is entitled to amend the terms. Changes are communicated to the customer at least three weeks before they take effect. The changes take effect if the customer does not object within three weeks of receipt and the provider has pointed out this legal consequence.</p>
+                                <p><strong>12.2</strong> The relationships between the parties are governed by the laws of the Federal Republic of Germany, excluding the UN Convention on Contracts for the International Sale of Goods (CISG).</p>
+                                <p><strong>12.3</strong> Place of jurisdiction and performance is the registered office of the provider.</p>
+                                <p><strong>12.4</strong> The contract language is German. In the case of different language versions, only the German text is authoritative.</p>
+                            </section>
+
+                            <section>
+                                <h2>13. Annex: SLA</h2>
+
+                                <h3>13.1 Subject Matter</h3>
+                                <p>In addition, the parties agree with this Service Level Agreement (SLA) services in the form of additional safeguards for the SaaS service provided. The commitments under the SLA stand independently alongside the customer's rights under the usage contract and under statute and do not affect, in particular, any warranty rights of the customer.</p>
+
+                                <h3>13.2 Provision of the SaaS Service</h3>
+                                <p><strong>13.2.1</strong> From the time agreed in the usage contract, the provider makes the SaaS service available in accordance with the following provisions. The handover point is the router output of the data center (server).</p>
+                                <p><strong>13.2.2</strong> The provider is not responsible for the nature of the required hardware and software on the customer's side or for the telecommunications connection up to the handover point.</p>
+
+                                <h3>13.3 Technical Availability and Access</h3>
+                                <p><strong>13.3.1</strong> Availability is understood by the parties as the technical usability of the SaaS service at the handover point, i.e. the ability to use the agreed core functionality.</p>
+                                <p><strong>13.3.2</strong> The provider makes access to the SaaS service available during the agreed term, excluding the agreed times of planned unavailability (system uptime).</p>
+                                <p><strong>13.3.3</strong> The parameters are agreed as follows:</p>
+                                <table style="width:100%; border-collapse:collapse; margin:1rem 0 1.5rem; font-size:0.95rem;">
+                                    <thead>
+                                        <tr style="background:var(--bg-subtle);">
+                                            <th style="padding:0.6rem 1rem; text-align:left; border:1px solid var(--border-light);">System usage time</th>
+                                            <th style="padding:0.6rem 1rem; text-align:left; border:1px solid var(--border-light);">Reference period</th>
+                                            <th style="padding:0.6rem 1rem; text-align:left; border:1px solid var(--border-light);">Availability</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td style="padding:0.6rem 1rem; border:1px solid var(--border-light);">7 × 24 hrs</td>
+                                            <td style="padding:0.6rem 1rem; border:1px solid var(--border-light);">Month</td>
+                                            <td style="padding:0.6rem 1rem; border:1px solid var(--border-light);">99 %</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p>Available use also includes periods during disruptions not caused by the provider (e.g. customer-side infrastructure, exceeding agreed usage levels, immaterial reduction of suitability).</p>
+
+                                <h3>13.4 Planned Unavailability</h3>
+                                <p>During periods of planned unavailability, the provider is entitled to maintain the SaaS service and perform data backups. Planned unavailability is to be agreed with the customer. The customer hereby agrees to a standard maintenance window of 8:00 p.m.–6:00 a.m. (Europe/Berlin). In justified cases (e.g. security/stability risks), emergency maintenance is possible; this will be announced in advance where feasible.</p>
+
+                                <h3>13.5 Response and Recovery Times, Support</h3>
+                                <p><strong>13.5.1</strong> The provider processes reported errors in accordance with the service level requirements in section 13.6.</p>
+                                <p><strong>13.5.2</strong> The additional safeguard obligation does not apply to errors caused by third-party software or open source software not deployed by the provider.</p>
+                                <p><strong>13.5.3</strong> The customer shall document errors in a comprehensible manner and report them in text form or via a ticket system.</p>
+                                <p><strong>13.5.4</strong> If customer cooperation is required to remedy an error, the customer provides a competent contact person authorized to take decisions.</p>
+                                <p><strong>13.5.5</strong> If the analysis shows that the error was caused by open source or third-party software, the provider forwards this result to the customer. In the case of customer fault, the provider is entitled to invoice the analysis effort by hourly rate.</p>
+                                <p><strong>13.5.6</strong> Supplementary IT consulting and support services are billed by effort at hourly rates.</p>
+                                <p><strong>13.5.7</strong> Support requests can be received on business days Mon–Fri from 9:00 a.m. to 5:00 p.m.</p>
+
+                                <h3>13.6 Service Level</h3>
+                                <p><strong>13.6.1</strong> Errors are classified into the following categories:</p>
+                                <ul>
+                                    <li><strong>Category 1:</strong> System outage / business-preventing error – meaningful use of the entire SaaS service is not possible.</li>
+                                    <li><strong>Category 2:</strong> Business-impeding error – use is impaired but can essentially continue and be worked around by other means.</li>
+                                    <li><strong>Category 3:</strong> Other error – no significant impact on functionality and usability.</li>
+                                </ul>
+                                <p><strong>13.6.2</strong> The following response and target resolution times are agreed:</p>
+                                <table style="width:100%; border-collapse:collapse; margin:1rem 0 1.5rem; font-size:0.95rem;">
+                                    <thead>
+                                        <tr style="background:var(--bg-subtle);">
+                                            <th style="padding:0.6rem 1rem; text-align:left; border:1px solid var(--border-light);">Service Level</th>
+                                            <th style="padding:0.6rem 1rem; text-align:left; border:1px solid var(--border-light);">Response time</th>
+                                            <th style="padding:0.6rem 1rem; text-align:left; border:1px solid var(--border-light);">Target resolution time</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td style="padding:0.6rem 1rem; border:1px solid var(--border-light);">1</td>
+                                            <td style="padding:0.6rem 1rem; border:1px solid var(--border-light);">Immediate</td>
+                                            <td style="padding:0.6rem 1rem; border:1px solid var(--border-light);">1 hour</td>
+                                        </tr>
+                                        <tr style="background:var(--bg-light);">
+                                            <td style="padding:0.6rem 1rem; border:1px solid var(--border-light);">2</td>
+                                            <td style="padding:0.6rem 1rem; border:1px solid var(--border-light);">&lt; 2 hours</td>
+                                            <td style="padding:0.6rem 1rem; border:1px solid var(--border-light);">4 hours</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding:0.6rem 1rem; border:1px solid var(--border-light);">3</td>
+                                            <td style="padding:0.6rem 1rem; border:1px solid var(--border-light);">&lt; 1 business day</td>
+                                            <td style="padding:0.6rem 1rem; border:1px solid var(--border-light);">1 business day</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p><strong>13.6.3</strong> The response time is calculated from receipt of the report based on office hours (during the agreed service hours).</p>
+                                <p><strong>13.6.4</strong> Target error remediation may also be achieved by instructions, patches, bug fixes, updates or upgrades.</p>
+
+                                <h3>13.7 Credits</h3>
+                                <p>If there is unavailability under 13.3.2, the provider offers credits on the following scale: &lt; 99 % → 10 % of the monthly fee; &lt; 98.5 % → 25 % of the monthly fee. Credits are offset against future fees; there is no entitlement to payout. Multiple credits for the same calendar month are limited to the maximum percentages stated. A prerequisite is that the customer is not in payment default and that the request contains the affected periods and ticket number(s). Credits constitute the customer's sole remedy for falling below the target availability.</p>
+                            </section>
+
+                            <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 2px solid var(--border-light); color: var(--text-light);">
+                                <em>Last updated: June 2026 &nbsp;·&nbsp; Questions? <a href="mailto:legal@maiqo.io">legal@maiqo.io</a></em>
+                            </div>
+
+                            </div><!-- /lang=en -->
+
                         </div>
                     </div>
                     <!-- /AGB -->
@@ -495,12 +896,14 @@
                                 <i class="fas fa-lock"></i>
                             </div>
                             <div class="trust-doc-header-text">
-                                <h2>Informationssicherheit bei maiqo</h2>
-                                <span class="trust-doc-meta">Stand: Juni 2026</span>
+                                <h2 data-i18n="trust-doc-security-title">Informationssicherheit bei maiqo</h2>
+                                <span class="trust-doc-meta" data-i18n="trust-doc-security-meta">Stand: Juni 2026</span>
                             </div>
                         </div>
 
                         <div class="legal-text">
+
+                            <div lang="de">
 
                             <p>maiqo hilft Unternehmen, Informationssicherheit und Compliance nachweisbar zu machen. Diesen Anspruch richten wir zuerst an uns selbst. Sicherheit ist für uns kein Zusatzfeature, sondern die Grundlage unserer Arbeit – und der Schutz Ihrer Daten ist die Voraussetzung für alles, was wir tun.</p>
 
@@ -564,6 +967,74 @@
                                 <em>Fragen zur Informationssicherheit? <a href="mailto:ims@maiqo.io">ims@maiqo.io</a></em>
                             </div>
 
+                            </div><!-- /lang=de -->
+
+                            <div lang="en">
+
+                            <p>maiqo helps companies make information security and compliance demonstrable. We apply that standard to ourselves first. Security is not an add-on for us, but the foundation of our work – and protecting your data is the prerequisite for everything we do.</p>
+
+                            <section>
+                                <h2>Our Commitment</h2>
+                                <p>Three core values guide every decision: the <strong>confidentiality</strong> of your data, its <strong>integrity</strong>, and its <strong>availability</strong> at all times. We treat the information you entrust to us with the same care that we would expect from a provider in a regulated environment.</p>
+                            </section>
+
+                            <section>
+                                <h2>Data in Germany, Cleanly Separated</h2>
+                                <p>Your data is processed and stored exclusively in a certified data center in Germany, with no transfer to third countries. Every customer environment is operated in a <strong>multi-tenant-isolated</strong> manner – with its own cluster and its own database. A mixing of customer data is thereby architecturally excluded. This way, you retain full data sovereignty.</p>
+                            </section>
+
+                            <section>
+                                <h2>Encryption and Access Protection</h2>
+                                <ul>
+                                    <li>All data is <strong>stored encrypted</strong> (AES-256) and transmitted exclusively over encrypted connections.</li>
+                                    <li>Access to production systems is limited to a minimum (<strong>least privilege</strong>).</li>
+                                    <li>Administrative access is consistently secured with <strong>multi-factor authentication (MFA)</strong> and is fully logged. MFA is mandatory wherever it is technically possible.</li>
+                                    <li>Within the platform, you control permissions via a <strong>role-based concept (RBAC)</strong>.</li>
+                                </ul>
+                            </section>
+
+                            <section>
+                                <h2>Security and Privacy from the Start</h2>
+                                <p>Security and data protection are an integral part of our product development – not an afterthought. Following the principles of <strong>Security and Privacy by Design and Default</strong>, we consider protection requirements already in the planning phase of every feature.</p>
+                            </section>
+
+                            <section>
+                                <h2>Responsible Use of AI</h2>
+                                <p>For AI features, we use exclusively an <strong>open source model</strong> that is operated on servers in Germany. Your data does not feed into the training of the model, and there is no transfer to external AI services such as OpenAI or similar providers. We govern responsible use through internal guidelines aligned with <strong>ISO 42001</strong>.</p>
+                            </section>
+
+                            <section>
+                                <h2>Management System, Certification and Evidence</h2>
+                                <p>We are in the process of establishing an <strong>Information Security Management System (ISMS) according to ISO 27001</strong>; certification is planned for 2026. We continuously identify, assess and treat risks.</p>
+                                <p>On request, we provide customers with security evidence and conclude Data Processing Agreements (DPAs) under the GDPR. Because we work daily with frameworks such as ISO 27001, NIS-2, DORA and TISAX, we hold ourselves to the same standards that our platform supports for our customers.</p>
+                            </section>
+
+                            <section>
+                                <h2>Backups and Availability</h2>
+                                <p>A documented backup concept ensures the recoverability of your data. Recovery objectives for time and data state (<strong>RTO and RPO</strong>) are defined and are regularly tested. A business continuity plan ensures that your operations continue even when something unexpected happens.</p>
+                            </section>
+
+                            <section>
+                                <h2>Transparency in the Event of an Incident</h2>
+                                <p>Should a security incident occur, we act quickly and inform affected customers openly and without delay.</p>
+                            </section>
+
+                            <section>
+                                <h2>Security is a Team Effort</h2>
+                                <p>The best technology only works with people who take it seriously. All employees with access to customer data undergo an extended background check before being hired, including a police clearance certificate. Regular security training is mandatory. We foster a culture in which reports of vulnerabilities are welcome, and we understand information security as a shared responsibility.</p>
+                            </section>
+
+                            <section>
+                                <h2>Reporting a Vulnerability</h2>
+                                <p>Security depends on watchful eyes – including from outside. If you discover a possible vulnerability, please report it to us confidentially at <a href="mailto:security@maiqo.io">security@maiqo.io</a>. We follow up on every report and thank everyone who helps make maiqo more secure.</p>
+                            </section>
+
+                            <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 2px solid var(--border-light); color: var(--text-light);">
+                                <em>Questions about information security? <a href="mailto:ims@maiqo.io">ims@maiqo.io</a></em>
+                            </div>
+
+                            </div><!-- /lang=en -->
+
                         </div>
                     </div>
                     <!-- /Informationssicherheit -->
@@ -607,32 +1078,50 @@
 
     <script src="script.js"></script>
 
-    <!-- Trust Center: document tab switching -->
+    <!-- Trust Center: dedicated URLs per document via History API + Netlify rewrites -->
     <script>
         (function () {
             const navItems = document.querySelectorAll('.trust-nav-item');
-            const docs = document.querySelectorAll('.trust-doc');
+            const VALID = ['privacy-policy', 'agb', 'security'];
+            const DEFAULT_DOC = 'privacy-policy';
+            const root = document.documentElement;
 
-            navItems.forEach(function (btn) {
-                btn.addEventListener('click', function () {
-                    const target = btn.dataset.doc;
+            function docFromPath() {
+                const m = window.location.pathname.match(/^\/trust\/([^\/?#]+)\/?$/);
+                if (m && VALID.indexOf(m[1]) !== -1) return m[1];
+                return DEFAULT_DOC;
+            }
 
-                    navItems.forEach(function (b) {
-                        b.classList.remove('is-active');
-                        b.setAttribute('aria-selected', 'false');
-                    });
-                    btn.classList.add('is-active');
-                    btn.setAttribute('aria-selected', 'true');
+            function activate(target) {
+                root.setAttribute('data-trust-doc', target);
+                navItems.forEach(function (item) {
+                    if (item.dataset.doc === target) {
+                        item.setAttribute('aria-current', 'page');
+                    } else {
+                        item.removeAttribute('aria-current');
+                    }
+                });
+            }
 
-                    docs.forEach(function (doc) {
-                        if (doc.id === 'doc-' + target) {
-                            doc.classList.add('is-visible');
-                        } else {
-                            doc.classList.remove('is-visible');
-                        }
-                    });
+            navItems.forEach(function (item) {
+                item.addEventListener('click', function (e) {
+                    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button === 1) return;
+                    e.preventDefault();
+                    const target = item.dataset.doc;
+                    const url = '/trust/' + target;
+                    if (window.location.pathname !== url) {
+                        history.pushState({ doc: target }, '', url);
+                    }
+                    activate(target);
+                    window.scrollTo({ top: 0, behavior: 'auto' });
                 });
             });
+
+            window.addEventListener('popstate', function () {
+                activate(docFromPath());
+            });
+
+            activate(docFromPath());
         })();
     </script>
 

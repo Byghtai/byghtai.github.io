@@ -298,7 +298,19 @@ const i18n = {
         'job-apply-text-1': 'Schick uns gerne deinen CV und ein paar Zeilen zu dir an <a href="mailto:hello@maiqo.io">hello@maiqo.io</a>.',
         'job-apply-text-2': 'Wenn du hast: GitHub/Portfolio oder ein Projekt, auf das du stolz bist.',
         'hiring-hero-title': 'Werde Teil von maiqo',
-        'hiring-hero-subtitle': 'Gestalte mit uns die Zukunft der KI-gestützten Compliance. Wir suchen talentierte Menschen, die etwas bewegen wollen.'
+        'hiring-hero-subtitle': 'Gestalte mit uns die Zukunft der KI-gestützten Compliance. Wir suchen talentierte Menschen, die etwas bewegen wollen.',
+        'trust-header-title': 'Trust Center',
+        'trust-header-subtitle': 'Rechtliche Dokumente, Datenschutz und Informationssicherheit für die maiqo-Plattform',
+        'trust-sidebar-label': 'Dokumente',
+        'trust-nav-privacy': 'Datenschutzerklärung SaaS',
+        'trust-nav-agb': 'Allg. Vertragsbedingungen',
+        'trust-nav-security': 'Informationssicherheit',
+        'trust-doc-privacy-title': 'Datenschutzerklärung für die maiqo SaaS-Plattform',
+        'trust-doc-privacy-meta': 'Stand: Juni 2026  ·  Version 1.0',
+        'trust-doc-agb-title': 'Allgemeine Vertragsbedingungen',
+        'trust-doc-agb-meta': 'maiqo GmbH  ·  Stand: Juni 2026',
+        'trust-doc-security-title': 'Informationssicherheit bei maiqo',
+        'trust-doc-security-meta': 'Stand: Juni 2026'
     },
     en: {
         'page-title': 'maiqo - Audit-ready by design',
@@ -599,7 +611,19 @@ const i18n = {
         'job-apply-text-1': 'Please send us your CV and a few lines about yourself to <a href="mailto:hello@maiqo.io">hello@maiqo.io</a>.',
         'job-apply-text-2': 'If you have: GitHub/Portfolio or a project you\'re proud of.',
         'hiring-hero-title': 'Join maiqo',
-        'hiring-hero-subtitle': 'Shape the future of AI-powered compliance with us. We are looking for talented people who want to make a difference.'
+        'hiring-hero-subtitle': 'Shape the future of AI-powered compliance with us. We are looking for talented people who want to make a difference.',
+        'trust-header-title': 'Trust Center',
+        'trust-header-subtitle': 'Legal documents, data protection, and information security for the maiqo platform',
+        'trust-sidebar-label': 'Documents',
+        'trust-nav-privacy': 'Privacy Policy SaaS',
+        'trust-nav-agb': 'General Terms',
+        'trust-nav-security': 'Information Security',
+        'trust-doc-privacy-title': 'Privacy Policy for the maiqo SaaS Platform',
+        'trust-doc-privacy-meta': 'Last updated: June 2026  ·  Version 1.0',
+        'trust-doc-agb-title': 'General Terms and Conditions',
+        'trust-doc-agb-meta': 'maiqo GmbH  ·  Last updated: June 2026',
+        'trust-doc-security-title': 'Information Security at maiqo',
+        'trust-doc-security-meta': 'Last updated: June 2026'
     }
 };
 

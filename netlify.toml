@@ -3,3 +3,20 @@
 # verwenden und liefert für http://localhost:8888/ einen 404.
 [build]
   publish = "."
+
+# Trust Center: einzelne Dokumente als eigene URLs (Rewrite, kein Redirect),
+# damit /trust.html das Dokument anhand des Pfads aktiviert.
+[[redirects]]
+  from = "/trust/privacy-policy"
+  to = "/trust.html"
+  status = 200
+
+[[redirects]]
+  from = "/trust/agb"
+  to = "/trust.html"
+  status = 200
+
+[[redirects]]
+  from = "/trust/security"
+  to = "/trust.html"
+  status = 200
