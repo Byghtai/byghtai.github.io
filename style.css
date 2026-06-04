@@ -436,6 +436,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 60px;
 }
 
 .compliance-dashboard, .dashboard-mockup {
@@ -3598,4 +3599,239 @@ body {
     .pm__grid { grid-template-columns: 1fr; }
     .pm-dom:nth-child(3),
     .pm-dom:nth-child(4) { display: none; }
+}
+
+/* =========================================================
+   Trust Center
+   ========================================================= */
+
+.trust-page {
+    padding-top: 100px;
+    padding-bottom: 5rem;
+    background: var(--bg-light);
+    min-height: 100vh;
+}
+
+.trust-header {
+    text-align: center;
+    padding: 2.5rem 0 2rem;
+}
+
+.trust-header h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.6rem;
+}
+
+.trust-header p {
+    font-size: 1.05rem;
+    color: var(--text-light);
+}
+
+.trust-layout {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 2rem;
+    align-items: start;
+    margin-top: 1rem;
+}
+
+/* Sidebar */
+.trust-sidebar {
+    position: sticky;
+    top: 110px;
+}
+
+.trust-sidebar-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-light);
+    padding: 0 0.75rem 0.6rem;
+    margin-bottom: 0.25rem;
+}
+
+.trust-nav {
+    background: #fff;
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.trust-nav-item {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    width: 100%;
+    padding: 0.7rem 0.85rem;
+    background: none;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: left;
+    font-family: inherit;
+    font-size: 0.9rem;
+    color: var(--text-medium);
+    transition: background 0.15s, color 0.15s;
+}
+
+.trust-nav-item:hover {
+    background: var(--bg-subtle);
+    color: var(--text-dark);
+}
+
+.trust-nav-item.is-active {
+    background: var(--primary-light);
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.trust-nav-item i {
+    width: 16px;
+    text-align: center;
+    flex-shrink: 0;
+    font-size: 0.85rem;
+    opacity: 0.75;
+}
+
+.trust-nav-item.is-active i {
+    opacity: 1;
+}
+
+.trust-nav-item .trust-nav-badge {
+    margin-left: auto;
+    font-size: 0.65rem;
+    font-weight: 600;
+    padding: 0.15rem 0.45rem;
+    border-radius: 20px;
+    background: var(--bg-subtle);
+    color: var(--text-light);
+    letter-spacing: 0.03em;
+}
+
+/* Content area */
+.trust-content {
+    background: #fff;
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    padding: 2.5rem 3rem;
+    min-height: 600px;
+}
+
+.trust-doc {
+    display: none;
+}
+
+.trust-doc.is-visible {
+    display: block;
+}
+
+.trust-doc-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid var(--border-light);
+}
+
+.trust-doc-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: var(--primary-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.trust-doc-header-text h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.25rem;
+}
+
+.trust-doc-header-text .trust-doc-meta {
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+/* Coming soon placeholder */
+.trust-coming-soon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 340px;
+    text-align: center;
+    color: var(--text-light);
+}
+
+.trust-coming-soon i {
+    font-size: 2.5rem;
+    margin-bottom: 1.2rem;
+    color: var(--border-light);
+}
+
+.trust-coming-soon h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--text-medium);
+    margin-bottom: 0.5rem;
+}
+
+.trust-coming-soon p {
+    font-size: 0.95rem;
+    max-width: 320px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .trust-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .trust-sidebar {
+        position: static;
+    }
+
+    .trust-nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+
+    .trust-nav-item {
+        flex: 1;
+        min-width: 160px;
+        justify-content: center;
+        font-size: 0.82rem;
+    }
+
+    .trust-nav-badge {
+        display: none;
+    }
+}
+
+@media (max-width: 640px) {
+    .trust-page {
+        padding-top: 88px;
+    }
+
+    .trust-content {
+        padding: 1.5rem 1.25rem;
+    }
+
+    .trust-header h1 {
+        font-size: 1.7rem;
+    }
 }
