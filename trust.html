@@ -18,7 +18,7 @@
     <!-- Trust Center: set active document from URL before first paint -->
     <script>
         (function () {
-            var VALID = ['privacy-policy', 'agb', 'security'];
+            var VALID = ['privacy-policy', 'gtc', 'security'];
             var m = location.pathname.match(/^\/trust\/([^\/?#]+)\/?$/);
             var target = m && VALID.indexOf(m[1]) !== -1 ? m[1] : 'privacy-policy';
             document.documentElement.setAttribute('data-trust-doc', target);
@@ -75,7 +75,7 @@
                             <i class="fas fa-shield-alt"></i>
                             <span data-i18n="trust-nav-privacy">Datenschutzerklärung SaaS</span>
                         </a>
-                        <a class="trust-nav-item" data-doc="agb" href="/trust/agb">
+                        <a class="trust-nav-item" data-doc="gtc" href="/trust/gtc">
                             <i class="fas fa-file-contract"></i>
                             <span data-i18n="trust-nav-agb">Allg. Vertragsbedingungen</span>
                         </a>
@@ -440,7 +440,7 @@
                     <!-- /Privacy Policy -->
 
                     <!-- AGB -->
-                    <div class="trust-doc" id="doc-agb">
+                    <div class="trust-doc" id="doc-gtc">
                         <div class="trust-doc-header">
                             <div class="trust-doc-icon">
                                 <i class="fas fa-file-contract"></i>
@@ -1082,7 +1082,7 @@
     <script>
         (function () {
             const navItems = document.querySelectorAll('.trust-nav-item');
-            const VALID = ['privacy-policy', 'agb', 'security'];
+            const VALID = ['privacy-policy', 'gtc', 'security'];
             const DEFAULT_DOC = 'privacy-policy';
             const root = document.documentElement;
 

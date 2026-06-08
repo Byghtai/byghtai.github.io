@@ -12,7 +12,7 @@
   status = 200
 
 [[redirects]]
-  from = "/trust/agb"
+  from = "/trust/gtc"
   to = "/trust.html"
   status = 200
 
