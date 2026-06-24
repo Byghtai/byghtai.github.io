@@ -306,11 +306,10 @@ const i18n = {
         'trust-nav-agb': 'Allg. Vertragsbedingungen',
         'trust-nav-security': 'Informationssicherheit',
         'trust-doc-privacy-title': 'Datenschutzerklärung für die maiqo SaaS-Plattform',
-        'trust-doc-privacy-meta': 'Stand: Juni 2026  ·  Version 1.0',
+        'trust-doc-privacy-meta': 'Stand: 08.06.2026',
         'trust-doc-agb-title': 'Allgemeine Vertragsbedingungen',
-        'trust-doc-agb-meta': 'maiqo GmbH  ·  Stand: Juni 2026',
-        'trust-doc-security-title': 'Informationssicherheit bei maiqo',
-        'trust-doc-security-meta': 'Stand: Juni 2026'
+        'trust-doc-agb-meta': 'maiqo GmbH  ·  Stand: 08.06.2026',
+        'trust-doc-security-title': 'Informationssicherheit bei maiqo'
     },
     en: {
         'page-title': 'maiqo - Audit-ready by design',
@@ -619,11 +618,10 @@ const i18n = {
         'trust-nav-agb': 'General Terms',
         'trust-nav-security': 'Information Security',
         'trust-doc-privacy-title': 'Privacy Policy for the maiqo SaaS Platform',
-        'trust-doc-privacy-meta': 'Last updated: June 2026  ·  Version 1.0',
+        'trust-doc-privacy-meta': 'Last updated: 8 June 2026',
         'trust-doc-agb-title': 'General Terms and Conditions',
-        'trust-doc-agb-meta': 'maiqo GmbH  ·  Last updated: June 2026',
-        'trust-doc-security-title': 'Information Security at maiqo',
-        'trust-doc-security-meta': 'Last updated: June 2026'
+        'trust-doc-agb-meta': 'maiqo GmbH  ·  Last updated: 8 June 2026',
+        'trust-doc-security-title': 'Information Security at maiqo'
     }
 };
 
